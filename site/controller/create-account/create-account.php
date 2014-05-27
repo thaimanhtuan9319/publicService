@@ -6,11 +6,13 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
  * and open the template in the editor.
  */
 require ('system/site.php');
-
+//require SYSPATH.('database.php');
+//db_connect();
+    
 load_header();
 load_menubar('index');
-load_leftbar('huongdan');
-load_content('huongdan');
-load_rightbar('blank');
-load_footer();
+load_leftbar('login');
+load_content('create-account');
+//load_rightbar();
+//load_footer();
 ?>

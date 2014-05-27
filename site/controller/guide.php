@@ -9,8 +9,8 @@ require ('system/site.php');
 
 load_header();
 load_menubar('index');
-load_leftbar('index');
-load_content('mauhoso');
+load_leftbar('guide');
+load_content('guide');
 load_rightbar('blank');
 load_footer();
 ?>

@@ -20,4 +20,4 @@ else {
     require ('site/controller/show_404.php');
 }
 
-
+?>

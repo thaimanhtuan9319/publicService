@@ -10,7 +10,7 @@ require ('system/site.php');
 load_header();
 load_menubar('index');
 load_leftbar('index');
-load_content('tracuuthongtin');
+load_content('lookup-info');
 load_rightbar('blank');
 load_footer();
 ?>

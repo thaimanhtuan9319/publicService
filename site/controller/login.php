@@ -10,9 +10,9 @@ require ('system/site.php');
 //Load cac thanh phan trang web
 load_header();
 load_menubar('index');
-load_leftbar('dangnhap');
-load_content('dangnhap');
-load_rightbar('blank');
+load_leftbar('login');
+load_content('login');
+//load_rightbar();
 //load_footer();
 
 ?>

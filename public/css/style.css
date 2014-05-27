@@ -1,0 +1,283 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 24, 2014, 9:51:40 AM
+    Author     : Tuan
+*/
+body {
+    margin:0px;
+    padding:0px;
+}
+
+#container {
+    padding:0px;
+    width: 980px;
+    margin-left:auto;
+    margin-right:auto;
+    position:relative;
+    top:0px;
+}
+
+#header {
+    background-image:url('../images/banner.png');
+    background-repeat:no-repeat;
+    height: 160px;
+    width:980px;
+    background-color:#fff000;
+}
+
+#leftbar {
+    display:inline;
+    float:left;
+    width:165px;
+}
+
+#content {
+    display:inline;
+    float:left;
+    width:605px;
+    padding:20px;
+}
+
+#rightbar {
+    display:inline;
+    float:left;
+    width:140px;
+}
+
+.spacer {clear:both;}
+
+#footer{
+    margin-top: 30px;
+    border-top: 3px solid #007bb6;  
+}
+
+p {
+    text-align:justify;
+}
+
+/* Vertical menu */
+
+ul.single-vertical-menu{
+    background: #007bb6;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+ul.single-vertical-menu > li{
+    font: 80% 'Lucida Sans Unicode', 'Bitstream Vera Sans', 'Trebuchet Unicode MS', 'Lucida Grande', Verdana, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.single-vertical-menu > li > a{
+    background: #007bb6;
+    border-bottom: 1px solid #393939;
+    color: #ffffff;
+    display: block;
+    margin: 0;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-weight: normal;
+}
+ul.single-vertical-menu > li > a:hover {
+    background: #2580a2 url('../images/hover.gif') left center no-repeat;
+    color: #fff;
+    padding-bottom: 10px;
+}
+.linkedimg {
+    border: #920001 1px solid;
+    cursor: pointer;
+}
+
+#owner {
+    display:inline;
+    float:left;
+    width: 660px;
+    color:black;
+    padding:20px;
+}
+
+#developer {
+    display:inline;
+    float:left;
+    color:black;
+    width: 240px;
+    padding:20px;
+    text-align: right;
+}
+
+.blank{
+    width: 0px;
+}
+/*Menu index*/
+#menubar{
+    margin-bottom: 30px;
+}
+#menubar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: auto;
+  position: relative;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  background: #ceced6;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #ceced6;
+  zoom: 1;
+}
+#menubar ul:before {
+  content: '';
+  display: block;
+}
+#menubar ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#menubar li {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0 4px;
+}
+#menubar li a {
+  display: block;
+  float: left;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px 7px 20px;
+  border-bottom: 3px solid transparent;
+}
+#menubar li a:hover {
+  color: #007bb6;
+  border-bottom: 3px solid #007bb6;
+}
+#menubar li.active a {
+  display: inline;
+  border-bottom: 3px solid #007bb6;
+  float: left;
+  margin: 0;
+}
+
+#menubar li.last{
+    display: inline;
+    float: right;
+    margin: 0;
+}
+
+/* end */
+
+/* Link in menu bar*/
+a.link{
+    text-decoration: none;
+    color:#007bb6;
+}
+a.link:hover{
+    color:#ffffff;
+}
+a.link:visited{
+    //color: #007bb6;
+}
+
+a.link:active{
+    color: #ffffff;
+    
+}
+/* end */
+
+/* Form login */
+.form-input{
+    width: 320px;
+    height:1.67em;
+    float: right;
+}
+#btLogin{
+    width: 100px;
+    height: 35px;
+    background: #007bb6;
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#login-form{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.button-center{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#login-error{
+    text-align: center;
+    color: #dd4b39;
+}
+/* end */
+
+/*Create account*/
+.create-account-label{
+    font-weight: bold;
+    color:#007bb6;
+}
+.create-account-input{
+    width: 260px;
+    height: 1.67em;
+}
+#btSignup{
+    width: 100px;
+    height: 35px;
+    background: #007bb6;
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+#create-account-success{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* end */
+
+/*Thu tuc hanh chinh*/
+.leftbar-title{
+    font-size: 14px;
+    margin-left: 5px;
+    font-weight: bold;
+    line-height: 34px;
+}
+
+/* end */
+
+/* table view account */
+.heading{
+    font-size: 20px;
+    font-weight: bold;
+}
+.box{
+    text-align: center;
+}
+.table{
+    text-align: left;
+    border:2px solid black;
+    border-collapse: collapse;
+}
+.table-head {
+    border-bottom: 2px solid black;
+    background: #007bb6;
+    color: white;
+}

@@ -30,3 +30,4 @@ function load_content($content){
     require ('site/view/content/'.$content.'.php');
 }
 
+?>

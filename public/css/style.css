@@ -24,7 +24,7 @@ body {
 #header {
     background-image:url('../images/banner.png');
     background-repeat:no-repeat;
-    height: 160px;
+    height: 130px;
     width:980px;
     background-color:#fff000;
 }
@@ -44,7 +44,7 @@ body {
 
 #rightbar {
     display:inline;
-    float:left;
+    float:right;
     width:140px;
 }
 
@@ -126,7 +126,7 @@ ul.single-vertical-menu > li > a:hover {
   display: block;
   font-size: 12px;
   font-weight: bold;
-  background: #ceced6;
+  background: #00aaaa;
   font-family: Arial, Helvetica, sans-serif;
   border-bottom: 1px solid #ceced6;
   zoom: 1;
@@ -149,19 +149,19 @@ ul.single-vertical-menu > li > a:hover {
 #menubar li a {
   display: block;
   float: left;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 20px 7px 20px;
   border-bottom: 3px solid transparent;
 }
 #menubar li a:hover {
-  color: #007bb6;
-  border-bottom: 3px solid #007bb6;
+  color: whitesmoke;
+  border-bottom: 3px solid whitesmoke;
 }
 #menubar li.active a {
   display: inline;
-  border-bottom: 3px solid #007bb6;
+  border-bottom: 3px solid #ffffff;
   float: left;
   margin: 0;
 }

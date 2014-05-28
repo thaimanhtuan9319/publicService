@@ -10,7 +10,7 @@ require SYSPATH.('client.php');
 $action = inputGet('action');
 
 if(!$action){
-    $action = 'trangchu';
+    $action = 'home';
 }
 if(file_exists('site/controller/'.$action.'.php'))
 {

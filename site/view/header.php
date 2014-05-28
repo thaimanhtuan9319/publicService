@@ -1,4 +1,6 @@
-<?php if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!'); 
+<?php 
+if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!'); 
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,4 +14,3 @@
             
             <div id="header"></div>
             
-?>

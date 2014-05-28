@@ -51,7 +51,7 @@ if(isset($_POST['submitted'])){
         session_start();
 	$_SESSION['username'] = $name;
         header("Location: http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])
-           ."/index.php?action=logedin_site/staff_site");
+           ."/index.php?action=loggedin_site/staff_site");
         exit();
     }
     elseif ($numrows3 > 0) {

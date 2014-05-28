@@ -5,6 +5,9 @@
         <group>
             <file>file:/C:/xampp/htdocs/publicService/site/model/validateInput.php</file>
             <file>file:/C:/xampp/htdocs/publicService/site/model/create-account.php</file>
+            <file>file:/C:/xampp/htdocs/publicService/public/css/style.css</file>
+            <file>file:/C:/xampp/htdocs/publicService/site/model/admin/create-user.php</file>
+            <file>file:/C:/xampp/htdocs/publicService/site/controller/admin/create-account.php</file>
         </group>
     </open-files>
 </project-private>

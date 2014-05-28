@@ -22,6 +22,7 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!'); ?>
       </ul>
    </li>
    <li><a href='#'><span>TRẢ LỜI CÔNG DÂN</span></a></li>
-   <li class='last'><a href='#'><span>XEM Ý KIẾN PHẢN HỒI</span></a></li>
+   <li><a href='#'><span>XEM Ý KIẾN PHẢN HỒI</span></a></li>
+   <li class='last'><a href='index.php?action=logout'><span>ĐĂNG XUẤT</span></a></li>
 </ul>		
 </div>

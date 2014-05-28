@@ -332,22 +332,7 @@ ul.single-vertical-menu li.leftbar-title{
 #staff-menubar .has-sub ul li:hover a {
   background: #007777;
 }
-/*#staff-menubar .has-sub .has-sub:hover > ul {
-  display: block;
-}
-#staff-menubar .has-sub .has-sub ul {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: 0;
-}
-#staff-menubar .has-sub .has-sub ul li a {
-  background: #007777;
-  border-bottom: 1px dotted #00dddd;
-}
-#staff-menubar .has-sub .has-sub ul li a:hover {
-  background: #005d5e;
-}*/
+
 /* end */
 /* Link in menu bar*/
 a.link{

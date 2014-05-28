@@ -6,11 +6,10 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
  * and open the template in the editor.
  */
 require ('system/site.php');
-
 load_header();
 load_menubar('index');
-//load_leftbar('blank');
-load_content('lookup-info');
+load_leftbar('blank');
+load_content('publicServiceOnline');
 load_rightbar('blank');
 load_footer();
 ?>

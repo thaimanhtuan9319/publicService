@@ -9,7 +9,7 @@ require ('system/site.php');
 
 load_header();
 load_menubar('index');
-load_leftbar('index');
+load_leftbar('blank');
 load_content('doc-form');
 load_rightbar('blank');
 load_footer();

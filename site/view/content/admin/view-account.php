@@ -1,9 +1,9 @@
 <?php
-
+    
 /* 
  * Author: Tuan ThaiManh
  */
-
+     
 if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
 require ('site/model/admin/view-account.php');
 db_connect();
@@ -14,21 +14,21 @@ $result = get_list_user();
     <div class="box">
         <div class="heading">DANH SÁCH TÀI KHOẢN</div>
         <div style="height: 30px"></div>
-            <table class="table">
-                <tr class="table-head">
-                        <td style="width: 50px">Id</td>
-                        <td style="width: 100px">Họ</td>
-                        <td style="width: 100px">Tên</td>
-                        <td style="width: 100px">Tên tài khoản</td>
-                        <td style="width: 100px">Mật khẩu</td>
-                        <td style="width: 100px">Loại tài khoản</td>
-                        <td style="width: 100px">Email</td>    
-                    </tr>
-                <tbody>
+        <table class="table">
+            <tr class="table-head">
+                <td style="width: 50px">Id</td>
+                <td style="width: 100px">Họ</td>
+                <td style="width: 100px">Tên</td>
+                <td style="width: 100px">Tên tài khoản</td>
+                <td style="width: 100px">Mật khẩu</td>
+                <td style="width: 100px">Loại tài khoản</td>
+                <td style="width: 100px">Email</td>    
+            </tr>
+            <tbody>
                     <?php 
                         foreach($result as $item){
                     ?>
-                    <tr>
+                <tr>
                     <td><?php echo $item['idUsers']; ?></td>
                     <td><?php echo $item['Lastname']; ?></td>
                     <td><?php echo $item['Firstname']; ?></td>
@@ -51,14 +51,9 @@ $result = get_list_user();
                             };
                             echo $usertype; ?></td>
                     <td><?php echo $item['Email']; ?></td>
-                
-                
-              	<td>
-              	
-              </td>
-            </tr>
+                </tr>
             <?php }?>      
-                </tbody>
-            </table>
+            </tbody>
+        </table>
     </div>
 </div>

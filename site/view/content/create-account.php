@@ -1,5 +1,5 @@
 <?php if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
-require ('site/model/create-user.php');
+require ('site/model/create-account.php');
 ?>
 
 <div id="content">

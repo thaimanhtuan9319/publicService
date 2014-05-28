@@ -62,7 +62,7 @@ p {
 /* Vertical menu */
 
 ul.single-vertical-menu{
-    background: #007bb6;
+    background: #d0dbdb;
     list-style-type: none;
     margin: 0px;
     padding: 0px;
@@ -74,9 +74,9 @@ ul.single-vertical-menu > li{
     list-style: none;
 }
 ul.single-vertical-menu > li > a{
-    background: #007bb6;
+    background: #d0dbdb;
     border-bottom: 1px solid #393939;
-    color: #ffffff;
+    color: #403f40;
     display: block;
     margin: 0;
     padding: 10px 12px;
@@ -88,6 +88,16 @@ ul.single-vertical-menu > li > a:hover {
     color: #fff;
     padding-bottom: 10px;
 }
+
+ul.single-vertical-menu li.leftbar-title{
+    background: #00aaaa;
+    height: 25px;
+    padding: 10px 12px;
+    color: #ffffff;
+}
+/* end */
+
+
 .linkedimg {
     border: #920001 1px solid;
     cursor: pointer;
@@ -171,8 +181,8 @@ ul.single-vertical-menu > li > a:hover {
     float: right;
     margin: 0;
 }
-
 /* end */
+
 
 /* Link in menu bar*/
 a.link{
@@ -251,16 +261,6 @@ a.link:active{
     margin-left: auto;
     margin-right: auto;
 }
-/* end */
-
-/*Thu tuc hanh chinh*/
-.leftbar-title{
-    font-size: 14px;
-    margin-left: 5px;
-    font-weight: bold;
-    line-height: 34px;
-}
-
 /* end */
 
 /* table view account */

@@ -22,7 +22,7 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!'); ?>
         <li>
             <a class = "link" href="index.php?action=sitemap">SƠ ĐỒ TRANG</a>
         </li>
-        <li>
+        <li class="last">
             <a class = "link" href="index.php?action=logout">ĐĂNG XUẤT</a>
         </li>
     </ul>

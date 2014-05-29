@@ -12,7 +12,7 @@ require ('system/site.php');
 load_header();
 load_menubar('staff');
 load_leftbar('blank');
-load_content('blank');
+load_content('staff/intro_service');
 load_rightbar('blank');
 load_footer();
 ?>

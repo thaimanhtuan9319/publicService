@@ -5,11 +5,12 @@
  */
      
 if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
+require ('site/model/staff/modify-service.php');
 ?>
 <div id="content" style="margin-left: 100px">
     <h3 style="text-align: center">Thay đổi thông tin dịch vụ công</h3>
     <div style="height: 20px"></div>
-    <form method="post" action="index.php?action=staff/modify-service">
+    <form method="POST" action="index.php?action=staff/modify-service" enctype="multipart/form-data">
         <fieldset>
             <span class="title">Lựa chọn dịch vụ cần chỉnh sửa</span>
             <div style="height: 20px"></div>
@@ -47,8 +48,9 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
             <div style="height: 20px"></div>
             <span class="title">Tài liệu liên quan</span>
             <div style="height: 20px"></div>
-            <input type="file" name="">
+            <input type="file" name="file_upload">
             <input type="submit" value="Tải lên" name="attach">
+            <p><?php if(isset($mess)) echo $mess?></p>
             <div style="height: 20px"></div>
             <div style="text-align: center">
                 <input style="width: 120px;height: 40px"

@@ -11,6 +11,6 @@ load_header();
 load_menubar('index');
 load_leftbar('faq');
 load_content('faq/sendReport');
-load_rightbar('index');
+load_rightbar('blank');
 load_footer();
 ?>

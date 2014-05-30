@@ -15,33 +15,28 @@ if(isset($_POST['submitted'])){
     $pass = $_POST['password'];
     
     // Ket noi toi co so du lieu
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-    
-    $con = mysql_connect($host,$user,$pass) 
-        or die("Can't connect to database!");
-    mysql_select_db("public_service",$con) 
-        or die("Can't select database!");
-    mysql_query("SET NAMES utf8");
+    $con=mysqli_connect("localhost","root","","public_service");
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
     
     // Kiem tra tai khoan nguoi dung nhap vao co phai tai khoan 
     // admin hay khong
     $sql1 = "select * from users where Username = '$name' and Password = '$pass' and User_type = '1';";
-    $result1 = mysql_query($sql1);
-    $numrows1 = mysql_num_rows($result1);
-    echo $numrows1;
+    $result1 = mysqli_query($con, $sql1);
+    $numrows1 = mysqli_num_rows($result1);
+    
     // Kiem tra tai khoan nguoi dung nhap vao co phai tai khoan
     // can bo hay khong
-    $sql2 = "select * from can_bo where username = '$name' and Password = '$pass';";
-    $result2 = mysql_query($sql2);
-    $numrows2 = mysql_num_rows($result2);
+    $sql2 = "select * from can_bo where username = '$name' and password = '$pass';";
+    $result2 = mysqli_query($con, $sql2);
+    $numrows2 = mysqli_num_rows($result2);
     
     // Kiem tra tai khoan nguoi dung nhap vao co phai tai khoan 
     // thuong hay khong
     $sql3 = "select * from users where Username = '$name' and Password = '$pass' and User_type = '2';";
-    $result3 = mysql_query($sql3);
-    $numrows3 = mysql_num_rows($result3);
+    $result3 = mysqli_query($con, $sql3);
+    $numrows3 = mysqli_num_rows($result3);
     
     
     if($numrows1 > 0){

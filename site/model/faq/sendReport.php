@@ -3,32 +3,41 @@
 /* 
  * Author: Tuan ThaiManh
  */
- 
- if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+if(!defined('SYSPATH')) die('Request not found');
+require SYSPATH.('database.php');   
+
+function get_list_dvql() {
+    $sql = 'select * from don_vi_quan_ly';
+    return db_select_list($sql);
+}
+
+$noi_dung = $don_vi = $tieu_de = '';
+
+if(isset($_POST['submitReport'])){  
     //Lay gia tri input
     $noi_dung = $_POST['sendReport'];
     $don_vi = $_POST['select_dvgy'];
     $tieu_de = $_POST['titleReport'];
 
-    if(isset($_POST['submitReport'])){    
-        require SYSPATH.('datetime.php');
-        /**
- * echo $tieu_de;
- *         echo $cau_hoi;
- *         echo $don_vi;]
- *         echo $tieu_de;
- *         echo $trang_thai;
- *         echo $datetime;
- */
-        //Neu khong loi thi insert
-        if($noi_dung != "" and $don_vi != "0"){
-            require SYSPATH.('database.php');           
-            $sql = "insert into y_kien_phan_hoi(tieu_de,noi_dung,Id_don_vi_quan_ly)
-                    values ('".$tieu_de."', '".$noi_dung."', '".$don_vi."');";
-            mysql_query($sql);
-            mysql_close();
-            echo "Gửi ý kiến góp ý thành công";
-        }   
-    }
+    if($noi_dung != "" and $don_vi != "0"){
+        $host = "localhost";
+        $user = "root";
+        $pass = "";
+        
+        $con = mysql_connect($host,$user,$pass) 
+            or die("Can't connect to database!");
+        mysql_select_db("public_service",$con) 
+            or die("Can't select database!");
+        mysql_query("SET NAMES utf8");
+        
+        $sql = "insert into y_kien_phan_hoi(tieu_de,noi_dung,Id_don_vi_quan_ly)
+              values ('".$noi_dung."', '".$tieu_de."', '".$don_vi."');";
+        
+        mysql_query($sql);
+        mysql_close();
+        echo "Gửi ý kiến góp ý thành công";
+    }   
 }
+
 ?>

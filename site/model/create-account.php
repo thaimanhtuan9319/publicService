@@ -35,7 +35,7 @@ if(isset($_POST['submitted'])){
         }
         
         $sql = "insert into users(Firstname, Lastname, Username, Password, User_type, Email) "
-                . "values ('".$firstname."', '$lastname', '$username','$password','$user_type','$email')";
+                . "values ('$firstname', '$lastname', '$username','$password','$user_type','$email')";
         
         if (!mysqli_query($con,$sql)) {
             die('Error: ' . mysqli_error($con));

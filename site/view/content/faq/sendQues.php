@@ -6,6 +6,8 @@
 
 if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
 require ('site/model/faq/sendQues.php');
+db_connect();
+$result = get_list_dvql();
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,18 +20,7 @@ require ('site/model/faq/sendQues.php');
     <select name="select_dvgd">
         <option value="0">--Chọn đơn vị giải đáp câu hỏi--</option>
         <?php
-        require ('system/database.php');
-
-        if(!defined('SYSPATH')) die('Request not found');
-        function get_list_dvql() {
-            $sql = 'select * from don_vi_quan_ly';
-            return db_select_list($sql);
-        }
-        
-        db_connect();
-        $result = get_list_dvql();
-        
-        foreach($result as $item){
+            foreach($result as $item){
         ?>
         <option value="<?php echo $item['Id_don_vi_quan_ly']; ?>"><?php echo $item['ten_don_vi_quan_ly']; ?></option>
         <?php } ?>

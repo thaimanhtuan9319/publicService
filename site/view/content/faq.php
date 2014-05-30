@@ -1,18 +1,62 @@
-<?php
 
+    <?php
+    
 /* 
  * Author: Tuan ThaiManh
  */
-
+     
+if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
+require ('site/model/faq.php');
+db_connect();
+$result = get_list_faq();
 ?>
 <!DOCTYPE html>
 <html>
+<head>
+<script type="text/javascript" src="http://ajax.Googleapis.com/ajax/libs/jquery/1/jquery.min.js"> </script>
+<script> 
+$(document).ready(function(){
+$(".flip").click(function(){
+$(".panel").toggle();
+});
+});
+</script>
+<style type="text/css"> 
+div.panel,p.flip
+{
+width:90%;
+margin:auto;
+padding:5px;
+background:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+div.panel
+{
+display:none;
+}
+</style>
+</head>
 <body>
-<div id="content" style="text-align: center;">
-    <h2 style="text-align: center; font: Segoe;">Các câu hỏi thường gặp</h2>
-    <p>Số ngày nhận kết quả từ khi nộp hồ sơ trực tuyến đối với dịch vụ Giải thể tổ chức khoa học và công nghệ?</p>
-    <p>Thời gian nhận được kết quả từ khi đăng ký dịch vụ trực tuyến là bao lâu?</p>
-    <p>Hiệu lực của Giấy chứng nhận đăng ký hoạt động khoa học và công nghệ</p>
+<div id="content" style="width: 750px">
+        <div class="heading">Các câu hỏi thường gặp</div>
+        <div style="height: 30px"></div>
+        <table class="table" style="border-collapse: collapse; background-color: whitesmoke;" >
+            <tbody>
+                    <?php 
+                        foreach($result as $item){
+                    ?>
+                <tr>
+                <fieldset class="main">
+                    <legend class="main" style="font-weight: bold;"><?php echo $item['tieu_de']; ?></legend>
+                    <?php echo $item['ngay_gui']; ?><br />
+                    Câu hỏi: <?php echo $item['cau_hoi']; ?> <br />     
+                    <button class="flip"> Xem câu trả lời </button> 
+                    <div class="panel"><?php echo $item['cau_tra_loi']; ?></div>             
+                </fieldset>
+                
+                </tr>
+            <?php }?>                  
+        </table>
 </div>
 </body>
 </html>

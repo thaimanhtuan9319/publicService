@@ -1,11 +1,11 @@
 <?php
-
+require SYSPATH.('database.php');
 /* 
  * Author: Tuan ThaiManh
  */
-
 $name = $pass = '';
 $nameMess = $passMess = '';
+$id_canbo = $id_coquan = '';
 
 if(isset($_POST['submitted'])){
     require 'site/model/validateInput.php'; 
@@ -32,6 +32,12 @@ if(isset($_POST['submitted'])){
     $result2 = mysqli_query($con, $sql2);
     $numrows2 = mysqli_num_rows($result2);
     
+    $sql_id = "select id_can_bo,Id_don_vi_quan_ly from can_bo where username = '$name' and password = '$pass';";
+    $rs = mysqli_query($con, $sql_id);
+    $row = mysqli_fetch_array($rs);
+    $id_canbo = $row['id_can_bo'];
+    $id_coquan = $row['Id_don_vi_quan_ly'];
+    
     // Kiem tra tai khoan nguoi dung nhap vao co phai tai khoan 
     // thuong hay khong
     $sql3 = "select * from users where Username = '$name' and Password = '$pass' and User_type = '2';";
@@ -48,8 +54,15 @@ if(isset($_POST['submitted'])){
         
     }
     elseif ($numrows2 > 0) {
+        
+        echo $id_canbo;
+        echo $id_coquan;
+        
+        
         session_start();
 	$_SESSION['username'] = $name;
+        $_SESSION['id_canbo'] = $id_canbo;
+        $_SESSION['id_coquan'] = $id_coquan;
         header("Location: http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])
            ."/index.php?action=loggedin_site/staff_site");
         exit();

@@ -5,6 +5,8 @@
  */
 
 if(!defined('SYSPATH')) die('Request not found');
+$id_canbo = $_SESSION['id_canbo'];
+$id_coquan = $_SESSION['id_coquan'];
 
 if(isset($_POST['submitted'])){
     $cauhoi = $cautraloi = '';
@@ -12,19 +14,22 @@ if(isset($_POST['submitted'])){
     $cauhoi = $_POST['cauhoi_faq'];
     $cautraloi = $_POST['cautraloi_faq'];
     
-    $con=mysqli_connect("localhost","root","","public_service");
-    if (mysqli_connect_errno()) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
+    $host = "localhost";
+    $user = "root";
+    $pass = "";
+    $con = mysql_connect($host,$user,$pass) 
+          or die("Can't connect to database!");
+    mysql_select_db("public_service",$con) 
+          or die("Can't select database!");
+    mysql_query("SET NAMES utf8");
     
-    $sql = "insert into faq(cau_hoi, cau_tra_loi) "
-                . "values ('$cauhoi', '$cautraloi')";
+    $sql = "insert into faq(cau_hoi, cau_tra_loi, id_can_bo, Id_don_vi_quan_ly) "
+                . "values ('$cauhoi', '$cautraloi', '$id_canbo', '$id_coquan')";
         
-    if (!mysqli_query($con,$sql)) {
-        die('Error: ' . mysqli_error($con));
+    if (!mysql_query($sql)) { 
+        die('Error: ' . mysql_error($con));
     }
-        
-    mysqli_close($con);
+    mysql_close($con);
     header("Location: http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])
        ."/index.php?action=staff/success");
     

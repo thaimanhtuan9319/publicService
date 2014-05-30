@@ -38,7 +38,7 @@ if(isset($_POST['submitted'])){
     
     mysqli_close($con);
     header("Location: http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])
-           ."/index.php?action=admin/success");
+           ."/index.php?action=staff/success");
 
     exit();
 }

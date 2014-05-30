@@ -1,5 +1,4 @@
 <?php
-
 /* 
  * Author: Tuan ThaiManh
  */
@@ -22,6 +21,7 @@ function db_connect(){
 //Ham lay danh sach cac ban ghi
 function db_select_list($sql){
     global $conn;
+    mysql_set_charset("utf8");
     $result = mysql_query($sql,$conn);
     if(!$result){
         die ('Sai cú pháp sql');

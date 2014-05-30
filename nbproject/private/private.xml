@@ -3,16 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/publicService/site/view/content/staff/view-feedback.php</file>
-            <file>file:/C:/xampp/htdocs/publicService/site/view/content/staff/modify-service.php</file>
-            <file>file:/C:/xampp/htdocs/publicService/site/view/content/staff/delete-service.php</file>
-            <file>file:/C:/xampp/htdocs/publicService/site/controller/faq/sendQues.php</file>
-            <file>file:/C:/xampp/htdocs/publicService/public/css/style.css</file>
-            <file>file:/C:/xampp/htdocs/publicService/site/view/content/staff/publish-service.php</file>
-            <file>file:/C:/xampp/htdocs/publicService/site/view/content/staff/view-list-service.php</file>
-            <file>file:/C:/xampp/htdocs/publicService/site/controller/faq/sendReport.php</file>
-            <file>file:/C:/xampp/htdocs/publicService/site/controller/faq.php</file>
-            <file>file:/C:/xampp/htdocs/publicService/site/view/content/staff/answer.php</file>
+            <file>file:/C:/xampp/htdocs/publicService/site/model/validateInput.php</file>
+            <file>file:/C:/xampp/htdocs/publicService/site/model/create-account.php</file>
+            <file>file:/C:/xampp/htdocs/publicService/site/model/staff/create-new-service.php</file>
         </group>
     </open-files>
 </project-private>

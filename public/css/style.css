@@ -28,7 +28,7 @@ body {
     background-repeat:no-repeat;
     height: 130px;
     width:980px;
-    background-color:#fff000;
+    background-color:#00aaaa;
 }
 
 #leftbar {
@@ -36,7 +36,95 @@ body {
     float:left;
     width:165px;
 }
-
+/* Leftbar */
+#leftbar,
+#leftbar ul,
+#leftbar ul li,
+#leftbar ul ul {  
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#leftbar ul {
+  display:inline;
+    float:left;
+    width:165px;
+}
+#leftbar ul li {
+  float: left;
+  min-height: 1px;
+  line-height: 1em;
+  vertical-align: middle;
+}
+#leftbar ul li.hover,
+#leftbar ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#leftbar ul ul {
+  margin-top: 1px;
+  visibility: hidden;
+  position: absolute;
+  top: 1px;
+  left: 99%;
+  z-index: 598;
+  width: 100%;
+}
+#leftbar ul ul li {
+  float: none;
+}
+#leftbar ul ul ul {
+  top: 1px;
+  left: 99%;
+}
+#leftbar ul li:hover > ul {
+  visibility: visible;
+}
+#leftbar ul li {
+  float: none;
+}
+#leftbar ul ul li {
+  font-weight: normal;
+}
+/* Custom CSS Styles */
+#leftbar {
+  font-family: Segoe UI;
+  font-size: 15px;
+  width: 200px;
+  background-color: #cecece;
+}
+#leftbar ul a,
+#leftbar ul a:link,
+#leftbar ul a:visited {
+  display: block;
+  color: #848889;
+  text-decoration: none;
+  font-weight: 300;
+}
+#leftbar > ul {
+  float: none;
+}
+#leftbar ul {
+  background: #fff;
+}
+#leftbar > ul > li {
+  border-left: 3px solid #d7d8da;
+}
+#leftbar > ul > li > a {
+  padding: 10px 20px;
+}
+#leftbar > ul > li:hover {
+  border-left: 3px solid #00aaaa;
+}
+#leftbar ul li:hover > a {
+  color: #00aaaa;
+}
+#leftbar > ul > li:hover {
+  background: #f6f6f6;
+}
+/*content */
 #content {
     display:inline;
     float:left;
@@ -63,218 +151,120 @@ p {
 
 /* Vertical menu */
 
-#leftmenu > ul {
-  list-style: none;
+#menubar,
+#menubar ul,
+#menubar li,
+#menubar span,
+#menubar a {
   margin: 0;
   padding: 0;
-  vertical-align: baseline;
+  position: relative;
+  border: 0;
   line-height: 1;
+  box-sizing: content-box;
 }
-/* The container */
-#leftmenu > ul {
-  display: block;
-  position: relative;
-  width: 165px;
-}
-/* The list elements which contain the links */
-#leftmenu > ul li {
-  display: block;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-/* General link styling */
-#leftmenu > ul li a {
-  /* Layout */
-
-  display: block;
-  position: relative;
-  margin: 0;
-  border-top: 1px dotted #fff;
-  border-bottom: 1px dotted #d9d9d9;
-  padding: 11px 20px;
-  /* Typography */
-
-  font-family: Helvetica, Arial, sans-serif;
-  color: #211e1e;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 #fff;
-  font-size: 11px;
-  font-weight: 600;
-  /* Background & effects */
-
-  background: #d6d6d6;
-}
-/* Rounded corners for the first link of the menu/submenus */
-#leftmenu > ul li:first-child > a {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-top: 0;
-}
-/* Rounded corners for the last link of the menu/submenus */
-#leftmenu > ul li:last-child > a {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-bottom: 0;
-}
-/* The hover state of the menu/submenu links */
-#leftmenu > ul li a:hover,
-#leftmenu > ul li:hover > a {
-  color: #ffffff;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-  background: #00aaaa;
-  background: -webkit-linear-gradient(#00aaaa, #007777);
-  background: -moz-linear-gradient(#00aaaa, #007777);
-  background: linear-gradient(#00aaaa, #007777);
-  border-color: transparent;
-}
-/* The arrow indicating a submenu */
-#leftmenu > ul .has-sub > a::after {
-  content: '';
-  position: absolute;
-  top: 16px;
-  right: 10px;
-  width: 0px;
-  height: 0px;
-  /* Creating the arrow using borders */
-
-  border: 4px solid transparent;
-  border-left: 4px solid #211e1e;
-}
-/* The same arrow, but with a darker color, to create the shadow effect */
-#leftmenu > ul .has-sub > a::before {
-  content: '';
-  position: absolute;
-  top: 17px;
-  right: 10px;
-  width: 0px;
-  height: 0px;
-  /* Creating the arrow using borders */
-
-  border: 4px solid transparent;
-  border-left: 4px solid #fff;
-}
-/* Changing the color of the arrow on hover */
-#leftmenu > ul li > a:hover::after,
-#leftmenu > ul li:hover > a::after {
-  border-left: 4px solid #fff;
-}
-#leftmenu > ul li > a:hover::before,
-#leftmenu > ul li:hover > a::before {
-  border-left: 4px solid rgba(0, 0, 0, 0.25);
-}
-/* THE SUBMENUS */
-#leftmenu > ul ul {
-  position: absolute;
-  left: 100%;
-  top: -9999px;
-  padding-left: 5px;
-  opacity: 0;
-  width: 165px;
-  /* The fade effect, created using an opacity transition */
-
-  -webkit-transition: opacity 0.3s ease-in;
-  -moz-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
-}
-#leftmenu > ul ul li a {
-  font-size: 12px;
-}
-/* Showing the submenu when the user is hovering the parent link */
-#leftmenu > ul li:hover > ul {
-  top: 0px;
-  opacity: 1;
-  z-index: 1;
-}
-
-/* end */
-
-
-.linkedimg {
-    border: #920001 1px solid;
-    cursor: pointer;
-}
-
-#owner {
-    display:inline;
-    float:left;
-    width: 660px;
-    color:black;
-    padding:20px;
-}
-
-#developer {
-    display:inline;
-    float:left;
-    color:black;
-    width: 240px;
-    padding:20px;
-    text-align: right;
-}
-
-.blank{
-    width: 0px;
-}
-/*Menu index*/
-#menubar{
-    margin-bottom: 30px;
-}
-#menubar ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+#menubar {
+  height: 49px;
+  border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  background: #fefefe;
+  background: -moz-linear-gradient(top, #fefefe 0%, #eee9f0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #eee9f0));
+  background: -webkit-linear-gradient(top, #fefefe 0%, #eee9f0 100%);
+  background: -o-linear-gradient(top, #fefefe 0%, #eee9f0 100%);
+  background: -ms-linear-gradient(top, #fefefe 0%, #eee9f0 100%);
+  background: linear-gradient(top, #fefefe 0%, #eee9f0 100%);
+  border-bottom: 2px solid #00aaaa;
   width: auto;
-  position: relative;
-  display: block;
-  font-size: 12px;
-  font-weight: bold;
-  background: #00aaaa;
-  font-family: Arial, Helvetica, sans-serif;
-  border-bottom: 1px solid #ceced6;
-  zoom: 1;
 }
-#menubar ul:before {
-  content: '';
-  display: block;
-}
+#menubar:after,
 #menubar ul:after {
   content: '';
-  display: table;
+  display: block;
   clear: both;
 }
-#menubar li {
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0 4px;
-}
-#menubar li a {
-  display: block;
-  float: left;
-  color: #ffffff;
+#menubar a {
+  background: #fefefe;
+  background: -moz-linear-gradient(top, #fefefe 0%, #ececec 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #ececec));
+  background: -webkit-linear-gradient(top, #fefefe 0%, #ececec 100%);
+  background: -o-linear-gradient(top, #fefefe 0%, #ececec 100%);
+  background: -ms-linear-gradient(top, #fefefe 0%, #ececec 100%);
+  background: linear-gradient(top, #fefefe 0%, #ececec 100%);
+  color: #000;
+  display: inline-block;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  font-size: 12px;
+  line-height: 49px;
+  padding: 0 20px;
   text-decoration: none;
-  font-weight: bold;
-  padding: 10px 20px 7px 20px;
-  border-bottom: 3px solid transparent;
 }
-#menubar li a:hover {
-  color: whitesmoke;
-  border-bottom: 3px solid whitesmoke;
+#menubar ul {
+  list-style: none;
 }
-#menubar li.active a {
-  display: inline;
-  border-bottom: 3px solid #ffffff;
+#menubar > ul {
   float: left;
-  margin: 0;
+}
+#menubar > ul > li {
+  float: left;
+}
+#menubar > ul > li > a {
+  color: #000;
+  font-size: 12px;
+}
+#menubar > ul > li:hover:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin-left: -10px;
 }
 
-#menubar li.last{
-    display: inline;
-    float: right;
-    margin: 0;
+#menubar > ul > li.active:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #00aaaa;
+  margin-left: -10px;
 }
+#menubar > ul > li.active > a {
+  -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+  background: #ececec;
+  background: -moz-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ffeeff ef));
+  background: -webkit-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: -o-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: -ms-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+}
+#menubar > ul > li:hover > a {
+  background: #ececec;
+  background: -moz-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ffeeff ef));
+  background: -webkit-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: -o-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: -ms-linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  background: linear-gradient(top, #ececec 0%, #ffeeff ef 100%);
+  -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+
 /* end */
 
 /* Staff menubar */
@@ -444,6 +434,7 @@ a.link:active{
 }
 /* end */
 
+
 /* Form login */
 .form-input{
     width: 320px;
@@ -528,4 +519,3 @@ a.link:active{
     font-size: 16px;
     font-weight: bold;
 }
-

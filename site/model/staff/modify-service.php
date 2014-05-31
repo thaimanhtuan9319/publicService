@@ -4,46 +4,48 @@
  * Author: Tuan ThaiManh
  */
      
-/*
- * Chuc nang upload file
- */
+require SYSPATH.('database.php');
+
+function get_list_dichvu(){
+    $sql = 'select * from dich_vu_cong';
+    return db_select_list($sql);
+}
+
+function get_list_donvi(){
+    $sql = 'select * from don_vi_quan_ly';
+    return db_select_list($sql);
+}
+
+if(isset($_POST['submited'])){
+    $id = $_POST['Id_dichvu'];
+    $serviceName = $_POST['ServiceName'];
+    $don_vi = $_POST['phongban'];
+    $mota = $_POST['mo_ta'];
+    $mucdocungcap = $_POST['muc_do_cung_cap'];
+    $congbo = $_POST['trang_thai_cong_bo'];
     
-if(isset($_POST['attach'])){
-//    if ($_FILES["file_upload"]["error"] > 0) {
-//        echo "Error: " . $_FILES["file_upload"]["error"] . "<br>";
-//    } else {
-//        echo "Upload: " . $_FILES["file_upload"]["name"] . "<br>";
-//        echo "Type: " . $_FILES["file_upload"]["type"] . "<br>";
-//        echo "Size: " . ($_FILES["file_upload"]["size"] / 1024) . " kB<br>";
-//        echo "Stored in: " . $_FILES["file_upload"]["tmp_name"];
-//    }
-//    
-    $allowedExts = array("pdf", "doc", "docx");
-    $temp = explode(".", $_FILES["file_upload"]["name"]);
-    $extension = end($temp);
-    $mess = '';
+    $host = "localhost";
+    $user = "root";
+    $pass = "";
+    
+    $con = mysql_connect($host,$user,$pass) 
+        or die("Can't connect to database!");
+    mysql_select_db("public_service",$con) 
+        or die("Can't select database!");
+    mysql_query("SET NAMES utf8");
+    
+    
+   $sql = "update public_service.dich_vu_cong set ten_dich_vu='".$serviceName."', mo_ta='"
+           .$mota."', Id_don_vi_quan_ly='".$don_vi."', muc_do_cung_cap='".$mucdocungcap."',"
+           . " trang_thai_cong_bo='".$congbo."' where dich_vu_cong.Id_dich_vu='".$id."'";
         
-    if ((($_FILES["file_upload"]["type"] == "application/pdf")
-        || ($_FILES["file_upload"]["type"] == "text/pdf")
-        || ($_FILES["file_upload"]["type"] == "application/msword")
-        || ($_FILES["file_upload"]["type"] == "application/vnd.openxmlformats-officedocument.wordprocessingml.document")) 
-        && ($_FILES["file_upload"]["size"] < 102400000) && in_array($extension, $allowedExts)) {
-        if ($_FILES["file_upload"]["error"] > 0) {
-            $mess =  "Error: " . $_FILES["file_upload"]["error"] . "<br>";
-        } else {
-            if (file_exists("public/upload/" . $_FILES["file_upload"]["name"])) {
-                $mess =  $_FILES["file_upload"]["name"] . " đã tồn tại ";
-            } else {
-//                echo "Upload: " . $_FILES["file_upload"]["name"] . "<br>";
-//                echo "Type: " . $_FILES["file_upload"]["type"] . "<br>";
-//                echo "Size: " . ($_FILES["file_upload"]["size"] / 1024) . " kB<br>";
-                move_uploaded_file($_FILES["file_upload"]["tmp_name"],
-                "public/upload/" . $_FILES["file_upload"]["name"]);
-//                echo "Stored in: " . "public/upload/" . $_FILES["file_upload"]["name"];
-                $mess = 'Tải file thành công';
-            }
+    if (!mysql_query($sql)) {
+            die('Error: ' . mysql_error($con));
         }
-    }  else {
-        $mess = 'File không hợp lệ';
-    }
+    
+    mysql_close($con);
+    header("Location: http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])
+           ."/index.php?action=staff/success");
+
+    exit();
 }

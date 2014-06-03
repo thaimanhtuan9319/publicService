@@ -36,7 +36,7 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!'); ?>
                 <li class='last'><a href='admin-delete-account-member'><span>Tài khoản công dân</span></a></li>
             </ul>
         </li>
-        <li><a href='staff-view-feedback'><span>PHẢN HỒI</span></a></li>
+        <li><a href=''><span>ĐĂNG BÀI</span></a></li>
         <li class='last'><a href='logout'><span>ĐĂNG XUẤT</span></a></li>
     </ul>		
 </div>

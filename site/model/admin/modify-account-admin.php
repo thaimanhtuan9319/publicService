@@ -18,25 +18,20 @@ function get_list_user_admin() {
 
 if(isset($_POST['submited'])){
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
     
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-        
-    $con = mysql_connect($host,$user,$pass) 
-        or die("Can't connect to database!");
-    mysql_select_db("public_service",$con) 
-        or die("Can't select database!");
-    mysql_query("SET NAMES utf8");
+    db_connect();
     
-   $sql = "update public_service.users set firstName='".$firstname."', lastname='"
-           .$lastname."', password='".$password."', email='".$email.
-           "' where users.username='".$username."'";
-        
+   $data = array(
+            "Firstname" => $firstname,
+            "Lastname" => $lastname,
+            "Username" => $username,
+            "Password" => $password,
+            "User_type" => $user_type,
+            "Email" => $email);
     if (!mysql_query($sql)) {
             die('Error: ' . mysql_error($con));
         }

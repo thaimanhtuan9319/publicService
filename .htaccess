@@ -1,5 +1,0 @@
-RewriteEngine off
-RewriteCond %{REQUEST_FILENAME} !-f [NC] #Not a file
-RewriteCond %{REQUEST_FILENAME} !-d [NC] #Not a dir
-RewriteRule ^site/controller/(.*)$ index.php?action=$1 
-

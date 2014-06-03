@@ -35,6 +35,8 @@ body {
     display:inline;
     float:left;
     width:165px;
+    height:  auto;
+    background-color: whitesmoke;
 }
 /* Leftbar */
 #leftbar,

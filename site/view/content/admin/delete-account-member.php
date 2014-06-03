@@ -12,7 +12,7 @@ $result = get_list_user_member();
     
 <div id="content">
     <h3>Lựa chọn tài khoản công dân cần xóa</h3>
-    <form method="POST" action="index.php?action=admin/delete-account-member" accept-charset='UTF-8'>
+    <form method="POST" action="" accept-charset='UTF-8'>
         <select name="username">
         <?php 
             $pulldown = '<option></option>';

@@ -21,7 +21,7 @@ if(isset($_POST['submited'])){
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $username = $_POST['username'];
-    $password = md5($_POST['password']);
+    $password = $_POST['password'];
     $email = $_POST['email'];
     $phongban = $_POST['phongban'];
         
@@ -38,21 +38,27 @@ if(isset($_POST['submited'])){
 //        require SYSPATH.('database.php');
             
             
-        db_connect();
-        $data = array(
-            "ten_can_bo" => $name,
-            "dien_thoai" => $phone,
-            "email" => $email,
-            "username" => $username,
-            "password" => $password,
-            "id_don_vi_quan_ly" => $phongban);
+        $host = "localhost";
+        $user = "root";
+        $pass = "";
+        
+        $con = mysql_connect($host,$user,$pass) 
+            or die("Can't connect to database!");
+        mysql_select_db("public_service",$con) 
+            or die("Can't select database!");
+        mysql_query("SET NAMES utf8");
+        
+        $sql = "insert into can_bo(ten_can_bo, dien_thoai, email, username, password, Id_don_vi_quan_ly) "
+            . "values ('$name', '$phone', '$email','$username','$password','$phongban')";
                 
-        db_insert('can_bo', $data);
+        if (!mysql_query($sql)) {
+            die('Error: ' . mysql_error($con));
+        }
         $mess = 'Tạo tài khoản thành công';
             
-        db_disconnect();
-        header("Location: http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])
-           ."/index.php?action=admin/success");
+        mysql_close($con);
+        header("Location: http://".$_SERVER['HTTP_HOST'].
+           "/publicService/appManager/admin-success");
         exit();
 //    }   
 }

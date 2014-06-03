@@ -10,7 +10,7 @@ require ('system/site.php');
 
 load_header();
 load_menubar('logged-in');
-load_leftbar('admin');
-load_content('admin/modify-account-admin');
+load_leftbar('blank');
+load_content('admin/grant-account-staff');
 load_rightbar('blank');
 load_footer();

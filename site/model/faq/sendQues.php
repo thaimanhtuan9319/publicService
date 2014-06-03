@@ -5,7 +5,6 @@
  */
 if(!defined('SYSPATH')) die('Request not found');
 require SYSPATH.('database.php');     
-require SYSPATH.('datetime.php');
 
        
 function get_list_dvql() {
@@ -21,7 +20,6 @@ if(isset($_POST['submitQues'])){
     $don_vi = $_POST['select_dvgd'];
     $tieu_de = $_POST['titleQues'];
     $trang_thai = "0";
-    $cau_tra_loi = "";
     
     require SYSPATH.('datetime.php');
         /**
@@ -34,19 +32,21 @@ if(isset($_POST['submitQues'])){
  */
     //Neu khong loi thi insert
     if($cau_hoi != "" and $don_vi != "0"){
-        db_connect();            
+        $host = "localhost";
+        $user = "root";
+        $pass = "";
         
-        $data = array(
-            "tieu_de" => $tieu_de,
-            "cau_hoi" => $cau_hoi,
-            "trang_thai" => $trang_thai,
-            "ngay_gui" => $datetime,
-            "Id_don_vi_quan_ly" => $don_vi,
-            "cau_tra_loi" => $cau_tra_loi
-        );
-        
-        db_insert('hoi_dap', $data);
-        db_disconnect();
+        $con = mysql_connect($host,$user,$pass) 
+            or die("Can't connect to database!");
+        mysql_select_db("public_service",$con) 
+            or die("Can't select database!");
+        mysql_query("SET NAMES utf8");
+            
+              
+        $sql = "insert into hoi_dap(tieu_de,noi_dung,trang_thai,ngay_gui,Id_don_vi_quan_ly)
+              values ('".$tieu_de."', '".$cau_hoi."', '".$trang_thai."', '".$datetime."', '".$don_vi."');";
+        mysql_query($sql);
+        mysql_close();
         echo "Gửi câu hỏi thành công";
     }   
 }

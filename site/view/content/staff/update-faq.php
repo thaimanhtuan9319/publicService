@@ -10,7 +10,7 @@ require ('site/model/staff/update-faq.php');
 <div id="content" style="margin-left: 100px">
     <h3 style="text-align: center">Cập nhật câu hỏi thường gặp</h3>
     <div style="height: 20px"></div>
-    <form method="post" action="index.php?action=staff/update-faq" accept-charset="utf8">
+    <form method="post" action="" accept-charset="utf8">
         <fieldset>
             <span class="title">Nhập câu hỏi</span>
             <div style="height: 20px"></div>

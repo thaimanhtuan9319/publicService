@@ -3,7 +3,8 @@
 /* 
  * Author: Tuan ThaiManh
  */
-session_start();
+
 session_destroy();
-header("Location: http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])."/index.php");
+header("Location: http://".$_SERVER['HTTP_HOST'].
+           "/publicService/appManager/home");
 ?>

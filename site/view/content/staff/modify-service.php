@@ -13,7 +13,7 @@ $result2 = get_list_donvi();
 <div id="content" style="margin-left: 100px">
     <h3 style="text-align: center">Thay đổi thông tin dịch vụ công</h3>
     <div style="height: 20px"></div>
-    <form method="POST" action="index.php?action=staff/modify-service">
+    <form method="POST" action="">
         <fieldset>
             <span class="title">Lựa chọn dịch vụ cần chỉnh sửa</span>
             <div style="height: 20px"></div>

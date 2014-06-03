@@ -12,7 +12,7 @@ $result1 = get_list_dichvu();
 <div id="content" style="margin-left: 100px">
     <h3 style="text-align: center">Hủy dịch vụ</h3>
     <div style="height: 20px"></div>
-    <form method="post" action="index.php?action=staff/delete-service">
+    <form method="post" action="">
         <fieldset>
             <span class="title">Lựa chọn dịch vụ cần hủy</span>
             <div style="height: 20px"></div>

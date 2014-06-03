@@ -9,9 +9,9 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
 require ('system/site.php');
 
 load_header();
-load_menubar('staff');
+load_menubar('logged-in');
 load_leftbar('blank');
-load_content('staff/answer');
+load_content('admin/create-account-admin');
 load_rightbar('blank');
 load_footer();
 ?>

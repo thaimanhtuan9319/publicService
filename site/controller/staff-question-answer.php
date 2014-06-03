@@ -9,8 +9,9 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
 require ('system/site.php');
 
 load_header();
-load_menubar('logged-in');
-load_leftbar('admin');
-load_content('admin/modify-account-member');
+load_menubar('staff');
+load_leftbar('blank');
+load_content('staff/question-answer');
 load_rightbar('blank');
 load_footer();
+?>

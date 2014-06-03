@@ -26,7 +26,7 @@ $result = get_list_docform();
                     ?>
                 <tr>
                     <td><?php echo $item['ten_tai_lieu']; ?></td>
-                    <td><a href="index.php?action=download-form&id_file=<?=$item['Id_tai_lieu']?>">download</a></td>
+                    <td><a href="download-form&id_file=<?=$item['Id_tai_lieu']?>">download</a></td>
                 </tr>
             <?php }?>                  
         </table>

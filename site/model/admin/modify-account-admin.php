@@ -18,27 +18,32 @@ function get_list_user_admin() {
 
 if(isset($_POST['submited'])){
     $username = $_POST['username'];
-    $password = md5($_POST['password']);
+    $password = $_POST['password'];
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
     
-    db_connect();
+    $host = "localhost";
+    $user = "root";
+    $pass = "";
+        
+    $con = mysql_connect($host,$user,$pass) 
+        or die("Can't connect to database!");
+    mysql_select_db("public_service",$con) 
+        or die("Can't select database!");
+    mysql_query("SET NAMES utf8");
     
-   $data = array(
-            "Firstname" => $firstname,
-            "Lastname" => $lastname,
-            "Username" => $username,
-            "Password" => $password,
-            "User_type" => $user_type,
-            "Email" => $email);
+   $sql = "update public_service.users set firstName='".$firstname."', lastname='"
+           .$lastname."', password='".$password."', email='".$email.
+           "' where users.username='".$username."'";
+        
     if (!mysql_query($sql)) {
             die('Error: ' . mysql_error($con));
         }
     
     mysql_close($con);
-    header("Location: http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])
-           ."/index.php?action=admin/success");
+    header("Location: http://".$_SERVER['HTTP_HOST'].
+           "/publicService/appManager/admin-success");
 
     exit();
 }

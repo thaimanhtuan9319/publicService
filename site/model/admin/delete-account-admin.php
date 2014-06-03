@@ -37,7 +37,7 @@ if(isset($_POST['submited'])){
         }
             
         mysql_close($con);
-    header("Location: http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])
-           ."/index.php?action=admin/success");
+    header("Location: http://".$_SERVER['HTTP_HOST'].
+           "/publicService/appManager/admin-success");
     exit();
 }

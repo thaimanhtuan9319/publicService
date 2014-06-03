@@ -4,15 +4,14 @@
  */
 
 session_start();
-//if(isset($_SESSION['username'])) echo $_SESSION['username'];
 
 if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
 require ('system/site.php');
 
 load_header();
 load_menubar('logged-in');
-load_leftbar('admin');
-load_content('blank');
+load_leftbar('blank');
+load_content('admin/delete-account-staff');
 load_rightbar('blank');
 load_footer();
 ?>

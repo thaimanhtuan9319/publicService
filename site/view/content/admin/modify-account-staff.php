@@ -12,7 +12,7 @@ $result = get_list_user_staff();
     
 <div id="content">
     <h3>Lựa chọn tài khoản cán bộ</h3>
-    <form method="POST" action="index.php?action=admin/modify-account-staff" accept-charset='UTF-8'>
+    <form method="POST" action="" accept-charset='UTF-8'>
         <select name="username">
         <?php 
             $pulldown = '<option></option>';

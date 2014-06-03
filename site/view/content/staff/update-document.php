@@ -12,7 +12,7 @@ $result = get_list_dichvu();
 <div id="content" style="margin-left: 100px">
     <h3 style="text-align: center">Khai báo dịch vụ công</h3>
     <div style="height: 20px"></div>
-    <form method="POST" action="index.php?action=staff/update-document" 
+    <form method="POST" action="" 
           enctype="multipart/form-data" accept-charset="utf8">
         <fieldset>
             <span class="title">Lựa chọn dịch vụ cần cập nhật tài liệu</span>

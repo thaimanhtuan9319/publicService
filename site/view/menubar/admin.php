@@ -14,7 +14,7 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!'); ?>
             <a class = "link" href="index.php?action=loggedin_site/admin_site">QUẢN TRỊ HỆ THỐNG</a>
         </li>
         <li class="last">
-            <a class = "link" href="index.php?action=logout">ĐĂNG XUẤT</a>
+            <a class = "link" href="logout">ĐĂNG XUẤT</a>
         </li>
     </ul>
         

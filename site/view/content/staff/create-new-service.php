@@ -45,6 +45,12 @@ $result = get_list_donvi();
                 <option value="4">Mức độ 4</option>
             </select>
             <div style="height: 20px"></div>
+            <span class="title">Tài liệu liên quan</span>
+            <div style="height: 20px"></div>
+            <input type="file" name="file_upload">
+            <input type="submit" value="Tải lên" name="attach">
+            <p><?php if(isset($mess)) echo $mess?></p>
+            <div style="height: 20px"></div>
             <div style="text-align: center">
                 <input style="width: 120px;height: 40px"
                        type="submit" value="Khai báo dịch vụ" name="submitted">

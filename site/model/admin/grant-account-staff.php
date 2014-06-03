@@ -10,10 +10,6 @@ function get_list_user_staff() {
     $sql = "select * from can_bo";
     return db_select_list($sql);
 }
-function get_list_donvi(){
-    $sql = 'select * from don_vi_quan_ly';
-    return db_select_list($sql);
-}
 
 if(!defined('SYSPATH')) die('Request not found');
 

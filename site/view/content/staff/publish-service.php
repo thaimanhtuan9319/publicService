@@ -23,7 +23,7 @@ $result = get_list_dichvu();
         <fieldset>
             <span class="title">Lựa chọn dịch vụ cần công bố</span>
             <div style="height: 20px"></div>
-            <select name="iddichvu">
+            <select name="tendichvu">
                <?php 
                     $pulldown = '<option></option>';
                     foreach ($result as $item) {

@@ -7,7 +7,7 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
 ?>
     
 <div id="leftbar">
-    <div id="leftmenu_admin">
+    <div id="leftmenu">
         <ul>
             <li class='has-sub'><a href='#'><span>Danh sách tài khoản</span></a>
                 <ul>

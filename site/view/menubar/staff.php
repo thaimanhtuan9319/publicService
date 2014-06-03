@@ -18,7 +18,6 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!'); ?>
       <ul>
          <li><a href='index.php?action=staff/view-list-service'><span>Xem danh sách các dịch vụ</span></a></li>
          <li><a href='index.php?action=staff/modify-service'><span>Thay đổi thông tin dịch vụ</span></a></li>
-         <li><a href='index.php?action=staff/update-document'><span>Cập nhật tài liệu liên quan</span></a></li>
          <li class='last'><a href='index.php?action=staff/delete-service'><span>Hủy dịch vụ</span></a></li>
       </ul>
    </li>

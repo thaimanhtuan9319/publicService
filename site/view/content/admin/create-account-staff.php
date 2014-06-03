@@ -5,10 +5,7 @@
  */
 
 if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
-require SYSPATH.('database.php');
 require ('site/model/admin/create-account-staff.php');
-db_connect();
-$result = get_list_donvi();
 ?>
 
 <div id="content" style="margin-left: 50px">
@@ -56,13 +53,8 @@ $result = get_list_donvi();
                 <label for="quanly">Phòng ban</label>
             </p>
             <select name="phongban">
-               <?php 
-                    $pulldown = '<option></option>';
-                    foreach ($result as $item) {
-                        $pulldown .= "<option value=".$item['Id_don_vi_quan_ly'].">".$item['ten_don_vi_quan_ly']."</option>\n";
-                    }
-                    echo $pulldown;
-                ?>
+                <option value="1">phong 1</option>
+                <option value="2">phong 2</option>
             </select>
             <div style="height: 30px"></div>
             

@@ -8,12 +8,7 @@ $name = $username = $password = $email = $phone = $phongban = '';
 $firstNameMess = $lastNameMess = $usernameMess = $passwordMess = $emailMess = '';
 
 $mess = '';
-
-function get_list_donvi(){
-    $sql = 'select * from don_vi_quan_ly';
-    return db_select_list($sql);
-}
-
+    
 if(isset($_POST['submited'])){
     require 'site/model/validateInput.php'; 
         
@@ -35,7 +30,7 @@ if(isset($_POST['submited'])){
     //Neu khong loi thi nhay toi trang Success
 //    if($firstNameMess == 'Hợp lệ' && $lastNameMess == 'Hợp lệ' && $usernameMess == 'Hợp lệ'
 //    && $passwordMess == 'Hợp lệ' && $emailMess == 'Hợp lệ'){
-//        require SYSPATH.('database.php');
+        require SYSPATH.('database.php');
             
             
         $host = "localhost";

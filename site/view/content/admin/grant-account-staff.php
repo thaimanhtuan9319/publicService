@@ -8,6 +8,7 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
 require ('site/model/admin/grant-account-staff.php');
 db_connect();
 $result = get_list_user_staff();
+$result2 = get_list_donvi();
 ?>
     
 <div id="content">
@@ -28,8 +29,13 @@ $result = get_list_user_staff();
         <br>
         <h3>Lựa chọn đơn vị trực thuộc </h3>
          <select name="phongban">
-            <option value="1">phong1</option>
-            <option value="2">phong2</option>
+            <?php 
+                    $pulldown = '<option></option>';
+                    foreach ($result2 as $item2) {
+                        $pulldown .= "<option value=".$item2['Id_don_vi_quan_ly'].">".$item2['ten_don_vi_quan_ly']."</option>\n";
+                    }
+                    echo $pulldown;
+                ?>
         </select>
         <div style="height: 30px"></div>
         <input type="submit" name="submited" value="Cấp quyền">

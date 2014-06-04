@@ -16,7 +16,7 @@ $result2 = get_list_donvi();
         <div id="notification"></div>
         <h3>Lựa chọn tài khoản cán bộ</h3>
         <br>
-        <form method="POST" action="index.php?action=admin/grant-account-staff" accept-charset='UTF-8'>
+        <form method="POST" action="" accept-charset='UTF-8'>
         <select name="username">
         <?php 
             $pulldown = '<option></option>';

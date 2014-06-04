@@ -20,7 +20,6 @@ $result = get_list_user_member();
                 <td style="width: 100px">Họ</td>
                 <td style="width: 100px">Tên</td>
                 <td style="width: 100px">Tên tài khoản</td>
-                <td style="width: 100px">Mật khẩu</td>
                 <td style="width: 100px">Email</td>    
             </tr>
             <tbody>
@@ -32,7 +31,6 @@ $result = get_list_user_member();
                     <td><?php echo $item['Lastname']; ?></td>
                     <td><?php echo $item['Firstname']; ?></td>
                     <td><?php echo $item['Username']; ?></td>
-                    <td><?php echo $item['Password']; ?></td>
                     <td><?php echo $item['Email']; ?></td>
                 </tr>
             <?php }?>      

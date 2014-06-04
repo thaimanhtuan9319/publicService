@@ -17,20 +17,35 @@ $result = get_list_user_admin();
         <?php 
             $pulldown = '<option></option>';
             foreach ($result as $item) {
-                $pulldown .= "<option value=".$item['Username'].">".$item['Username']."</option>\n";
+                $pulldown .= "<option value=".$item['Id_user'].">".$item['Username']."</option>\n";
             }
             echo $pulldown;
         ?>
         </select>
-        <h4>Thay đổi mật khẩu</h4>
-        <input type="text" name="password">
-        <h4>Thay đổi Tên</h4>
-        <input type="text" name="firstname">
-        <h4>Thay đổi Họ</h4>
-        <input type="text" name="lastname">
-        <h4>Thay đổi Email</h4>
-        <input type="text" name="email">
+        <p class="create-account-label">
+                <label for="password">Nhập mật khẩu cũ</label>
+            </p>
+            <input class="create-account-input" type="password" name="oldpassword" />
+            <span class="input-error" style="color: #dd4b39">* <?php echo $oldpasswordMess;?></span>
+            <div style="height: 10px"></div>
         <div style="height: 20px"></div>
-        <input name="submited" type="submit" value="Cập nhật">
+        
+        <p class="create-account-label">
+                <label for="password">Nhập mật khẩu mới</label>
+            </p>
+            <input class="create-account-input" type="password" name="newpassword" />
+            <span class="input-error" style="color: #dd4b39">* <?php echo $newpasswordMess;?></span>
+            <div style="height: 10px"></div>
+        <div style="height: 20px"></div>
+        
+        <p class="create-account-label">
+                <label for="password">Nhập lại mật khẩu</label>
+            </p>
+            <input class="create-account-input" type="password" name="repassword" />
+            <span class="input-error" style="color: #dd4b39">* <?php echo $repasswordMess;?></span>
+            <div style="height: 10px"></div>
+        <div style="height: 20px"></div>
+        
+        <input name="submited" type="submit" value="Cập nhật"/>
     </form>
 </div>

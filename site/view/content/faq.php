@@ -13,7 +13,7 @@ $result = get_list_faq();
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript" src="http://ajax.Googleapis.com/ajax/libs/jquery/1/jquery.min.js"> </script>
+        <script type="text/javascript" src="../../../public/jquery/jquery-1.11.1.min.js"> </script>
         <script> 
             $(document).ready(function(){
                 $(".flip").click(function(){

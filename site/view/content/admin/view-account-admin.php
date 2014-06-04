@@ -20,7 +20,6 @@ $result = get_list_user_admin();
                 <td style="width: 120px">Họ</td>
                 <td style="width: 120px">Tên</td>
                 <td style="width: 120px">Tên tài khoản</td>
-                <td style="width: 120px">Mật khẩu</td>
                 <td style="width: 120px">Email</td>    
             </tr>
             <tbody>
@@ -32,7 +31,6 @@ $result = get_list_user_admin();
                     <td><?php echo $item['Lastname']; ?></td>
                     <td><?php echo $item['Firstname']; ?></td>
                     <td><?php echo $item['Username']; ?></td>
-                    <td><?php echo $item['Password']; ?></td>
                     <td><?php echo $item['Email']; ?></td>
                 </tr>
             <?php }?>      

@@ -19,7 +19,6 @@ $result = get_list_user_staff();
                 <td style="width: 50px">Id</td>
                 <td style="width: 100px">Tên cán bộ</td>
                 <td style="width: 100px">Tên tài khoản</td>
-                <td style="width: 100px">Mật khẩu</td>
                 <td style="width: 100px">Số điện thoại</td>
                 <td style="width: 100px">Email</td>    
             </tr>
@@ -31,7 +30,6 @@ $result = get_list_user_staff();
                     <td><?php echo $item['id_can_bo']; ?></td>
                     <td><?php echo $item['ten_can_bo']; ?></td>
                     <td><?php echo $item['username']; ?></td>
-                    <td><?php echo $item['password']; ?></td>
                     <td><?php echo $item['dien_thoai']; ?></td>
                     <td><?php echo $item['email']; ?></td>
                 </tr>

@@ -21,7 +21,7 @@ $result = get_list_donvi();
                 <label for="name">Tên cán bộ</label>
             </p>
             <input class="create-account-input" type="text" name="name" value="<?php echo $name; ?>">
-            <span class="input-error" style="color: #dd4b39">* <?php echo $lastNameMess;?></span>
+            <span class="input-error" style="color: #dd4b39">* <?php echo $nameMess;?></span>
             <div style="height: 10px"></div>
             
             <p class="create-account-label">
@@ -34,23 +34,16 @@ $result = get_list_donvi();
             <p class="create-account-label">
                 <label for="password">Mật khẩu</label>
             </p>
-            <input class="create-account-input" type="text" name="password" >
+            <input class="create-account-input" type="password" name="password" >
             <span class="input-error" style="color: #dd4b39">* <?php echo $passwordMess;?></span>
             <div style="height: 10px"></div>
             
             <p class="create-account-label">
-                <label for="phone">Số điện thoại</label>
+                <label for="phone">Nhập lại mật khẩu</label>
             </p>
-            <input class="create-account-input" type="text" name="phone" >
-            <span class="input-error" style="color: #dd4b39">* <?php echo $passwordMess;?></span>
+            <input class="create-account-input" type="password" name="repassword" >
+            <span class="input-error" style="color: #dd4b39">* <?php echo $repasswordMess;?></span>
             <div style="height: 10px"></div>
-            
-            <p class="create-account-label">
-                <label for="email">Email</label>
-            </p>
-            <input class="create-account-input" type="text" name="email" value="<?php echo $email; ?>">
-            <span class="input-error" style="color: #dd4b39">* <?php echo $emailMess;?></span>
-            <div style="height: 30px"></div>
             
             <p class="create-account-label">
                 <label for="quanly">Phòng ban</label>

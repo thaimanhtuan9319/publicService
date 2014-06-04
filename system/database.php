@@ -24,7 +24,7 @@ function db_select_list($sql){
     mysql_set_charset("utf8");
     $result = mysql_query($sql,$conn);
     if(!$result){
-        die ('Sai cú pháp sql');
+        die ('Sai cú pháp sql hoặc không có dữ liệu trong csdl');
     }
     $list = array();
     while ($row = mysql_fetch_array($result,MYSQL_ASSOC)) {

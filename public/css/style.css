@@ -131,6 +131,13 @@ body {
     width:605px;
     padding:20px;
 }
+#contentall {
+    display:inline;
+    float:left;
+    width:940px;
+    padding:20px;
+    background-color: white;
+}
 
 #rightbar {
     display:inline;

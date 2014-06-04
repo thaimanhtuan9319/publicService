@@ -3,7 +3,11 @@
 /* 
  * Author: Tuan ThaiManh
  */
-
+//session_start();
+if(!isset($_SESSION['username'])) {
+    header("Location: http://".$_SERVER['HTTP_HOST']."/publicService/appManager/login");
+}
+//echo $_SESSION['username'];
 if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
 require ('site/model/faq/sendQues.php');
 db_connect();

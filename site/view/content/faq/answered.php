@@ -13,7 +13,7 @@ $result = get_list_answered();
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript" src="http://ajax.Googleapis.com/ajax/libs/jquery/1/jquery.min.js"> </script>
+        <script type="text/javascript" src="public/jquery/jquery-1.11.1.min.js"> </script>
         <script> 
             $(document).ready(function(){
                 $(".flip").click(function(){
@@ -49,9 +49,9 @@ $result = get_list_answered();
                 <fieldset class="main">
                     <legend class="main" style="font-weight: bold;"><?php echo $item['tieu_de']; ?></legend>
                     <?php echo $item['ngay_gui']; ?><br />
-                    Câu hỏi: <?php echo $item['noi_dung']; ?> <br />     
+                    Câu hỏi: <?php echo $item['cau_hoi']; ?> <br />     
                     <button class="flip"> Xem câu trả lời </button> 
-                    <div class="panel"><?php echo $item['trang_thai']; ?></div>             
+                    <div class="panel"><?php echo $item['cau_tra_loi']; ?></div>             
                 </fieldset>
                 
                 </tr>

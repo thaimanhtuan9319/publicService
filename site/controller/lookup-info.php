@@ -6,9 +6,10 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
  * and open the template in the editor.
  */
 require ('system/site.php');
-
+session_start();
 load_header();
-load_menubar('index');
+if(!isset($_SESSION['username'])) load_menubar('index');
+else load_menubar('member');
 load_leftbar('blank');
 load_content('lookup-info');
 load_rightbar('blank');

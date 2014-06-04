@@ -15,7 +15,7 @@ $id = $_GET['id'];
         <fieldset>
             <h3>Nhập câu trả lời</h3>
             <div style="height: 20px"></div>
-            <textarea name="answer" type="text">Nhập câu trả lời vào đây</textarea>
+            <textarea name="answer" >Nhập câu trả lời vào đây</textarea>
             <div style="height: 20px"></div>
             <div style="text-align: center">
                 <input style="width: 120px;height: 40px"

@@ -9,24 +9,25 @@ require ('site/model/staff/view-feedback.php');
 db_connect();
 $result = get_list_feedback();
 ?>
-<div id="content" style="margin-left: 100px">
-    <h3 style="text-align: center">Danh sách ý kiến phản hồi</h3>
+<div id="contentall">
+    <h3 style="text-align: center">Ý kiến đóng góp</h3>
     <div style="height: 20px"></div>
-    <table class="table">
-        <tr class="table-head">
-            <td style="width: 150px;text-align: center">Người gửi</td>
-            <td style="width: 450px;text-align: center">Nội dung</td>
-        </tr>
-        <tbody>
-            <?php 
-			 
-                foreach($result as $item){
-            ?>
-            <tr>
-                <td><?php echo $item['tieu_de']; ?></a></td>
-                <td><?php echo $item['noi_dung']; ?></td>
+    <div>
+            <table class="table" style="border-collapse: collapse; background-color: whitesmoke;" >
+                <tbody>
+                    <?php 
+                        foreach($result as $item){
+                    ?>
+                    <tr>
+                <fieldset class="main">
+                    <legend class="main" style="font-weight: bold;"><?php echo $item['tieu_de']; ?></legend>
+                    <?php echo $item['ngay_gui']; ?><br />
+                    Người gửi: <?php echo $item['nguoi_gui']; ?><br />
+                    Nội dung: <?php echo $item['noi_dung']; ?> <br />     
+                </fieldset>
                 </tr>
-            <?php }?>    
-        </tbody>
-    </table>
+                <?php } ?>
+                </tbody>
+            </table>
+        </div>
 </div>

@@ -5,6 +5,9 @@
  */
 
 if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
+if(!isset($_SESSION['username'])) {
+    header("Location: http://".$_SERVER['HTTP_HOST']."/publicService/appManager/login");
+}
 require ('site/model/faq/sendReport.php');
 db_connect();
 $result = get_list_dvql();

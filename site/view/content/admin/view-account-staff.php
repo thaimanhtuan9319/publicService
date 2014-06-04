@@ -20,7 +20,8 @@ $result = get_list_user_staff();
                 <td style="width: 100px">Tên cán bộ</td>
                 <td style="width: 100px">Tên tài khoản</td>
                 <td style="width: 100px">Số điện thoại</td>
-                <td style="width: 100px">Email</td>    
+                <td style="width: 100px">Email</td>  
+                <td style="width: 200px;">Đơn vị quản lý</td>  
             </tr>
             <tbody>
                     <?php 
@@ -32,6 +33,11 @@ $result = get_list_user_staff();
                     <td><?php echo $item['username']; ?></td>
                     <td><?php echo $item['dien_thoai']; ?></td>
                     <td><?php echo $item['email']; ?></td>
+                    <?php $sql = "select * from don_vi_quan_ly where Id_don_vi_quan_ly = '".$item['Id_don_vi_quan_ly']."'";
+                            $query = mysql_query($sql);
+                            $row = mysql_fetch_array($query);
+                            ?>
+                    <td><?php echo $row['ten_don_vi_quan_ly']; ?></td>
                 </tr>
             <?php }?>      
             </tbody>

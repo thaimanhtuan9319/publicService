@@ -7,8 +7,11 @@
 if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
 require ('system/site.php');
 
+session_start();
 load_header();
-load_menubar('index');
+if(!isset($_SESSION['username'])) load_menubar('index');
+else load_menubar('member');
+
 load_leftbar('faq');
 load_content('faq/sendReport');
 load_rightbar('blank');

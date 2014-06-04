@@ -9,26 +9,21 @@ require ('site/model/staff/question-answer.php');
 db_connect();
 $result = get_list_question();
 ?>
-<div id="content" style="margin-left: 100px">
+<div id="contentall">
     <h3 style="text-align: center">Trả lời công dân</h3>
     <div style="height: 20px"></div>
-    <table class="table">
-        <tr class="table-head">
-            <td style="width: 250px">Tiêu đề</td>
-            <td style="width: 250px">Nội dung</td>
-            <td style="width: 100px">Trạng thái</td>
-            <td style="width: 100px">Ngày gửi</td>
-            <td style="width: 100px"></td>
-        </tr>
-        <tbody>
-            <?php 
-                
-                foreach($result as $item){
-            ?>
-            <tr>
-                <td><?php echo $item['tieu_de']; ?></a></td>
-                <td><?php echo $item['noi_dung']; ?></a></td>
-                <td><?php
+    <div>
+            <table class="table" style="border-collapse: collapse; background-color: whitesmoke;" >
+                <tbody>
+                    <?php 
+                        foreach($result as $item){
+                    ?>
+                    <tr>
+                <fieldset class="main">
+                    <legend class="main" style="font-weight: bold;"><?php echo $item['tieu_de']; ?></legend>
+                    <?php echo $item['ngay_gui']; ?><br />
+                    Câu hỏi: <?php echo $item['cau_hoi']; ?> <br />     
+                    Trạng thái: <?php
                     switch ($item['trang_thai']){
                         case 0:
                             echo "Chưa trả lời";
@@ -39,16 +34,17 @@ $result = get_list_question();
                         default :
                             break;
                     }
-                        ?></td>
-                <td><?php echo $item['ngay_gui']; ?></td>
-                <?php if($item['trang_thai'] == 0){ ?>    
-                <td><a href="staff-answer&id=<?=$item['Id_hoi_dap']?>">Trả lời</a></td>
-                 <?php } ?>
-                <?php if($item['trang_thai'] == 1){ ?>    
-                <td><a href="staff-modify&id=<?=$item['Id_hoi_dap']?>">Chỉnh sửa</a></td>
-                 <?php } ?>   
-            </tr>
-            <?php }?>    
-        </tbody>
-    </table>
-</div>
+                        ?>
+                    <br />Trả lời: <?php echo $item['cau_tra_loi']; ?> <br /> 
+                    <?php if($item['trang_thai'] == 0){ ?>    
+                        <td><a href="staff-answer&id=<?=$item['Id_hoi_dap']?>">Trả lời</a></td>
+                         <?php } ?>
+                        <?php if($item['trang_thai'] == 1){ ?>    
+                        <td><a href="staff-modify&id=<?=$item['Id_hoi_dap']?>">Chỉnh sửa</a></td>
+                         <?php } ?>           
+                        </fieldset>
+                        </tr>
+                    <?php }?>                  
+            </table>
+        </div>
+           

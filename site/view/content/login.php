@@ -6,7 +6,7 @@
 
 if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
 require ('site/model/login.php');
-session_start();
+
 // store session data
 $_SESSION['views']=1;
 ?>

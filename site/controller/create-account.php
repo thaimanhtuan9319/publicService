@@ -8,8 +8,10 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
 require ('system/site.php');
 //require SYSPATH.('database.php');
 //db_connect();
-    
+session_start();
 load_header();
+if(!isset($_SESSION['username'])) load_menubar('index');
+else load_menubar('member');
 load_menubar('index');
 load_leftbar('login');
 load_content('create-account');

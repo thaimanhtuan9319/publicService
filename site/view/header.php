@@ -8,6 +8,7 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
         <link rel="Stylesheet" href="../public/css/style.css" type="text/css">
         <link rel="Stylesheet" href="../public/css/leftmenu_admin.css" type="text/css">
+        <link rel="Stylesheet" href="../public/css/table-style.css" type="text/css">
     </head>        
     <body>
         

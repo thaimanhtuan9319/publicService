@@ -47,11 +47,8 @@ $result = get_list_faq();
                     ?>
                     <tr>
                 <fieldset class="main">
-                    <legend class="main" style="font-weight: bold;"><?php echo $item['tieu_de']; ?></legend>
-                    <?php echo $item['ngay_gui']; ?><br />
-                    Câu hỏi: <?php echo $item['cau_hoi']; ?> <br />     
-                    <button class="flip"> Xem câu trả lời </button> 
-                    <div class="panel"><?php echo $item['cau_tra_loi']; ?></div>             
+                    <legend class="main" style="font-weight: bold;">Câu hỏi: <?php echo $item['cau_hoi']; ?></legend>
+                    <div><?php echo $item['cau_tra_loi']; ?></div>             
                 </fieldset>
                 </tr>
             <?php }?>                  

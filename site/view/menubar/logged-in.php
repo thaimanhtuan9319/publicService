@@ -25,7 +25,7 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!'); ?>
                 <li><a href='admin-modify-account-admin'><span>Tài khoản admin</span></a></li>
             </ul>
         </li>
-        <li><a href='admin-grant-account-staff'><span>PHÂN QUYỀN CÁN BỘ</span></a></li>
+        <li><a href='admin-grant-account-staff'><span>PHÂN QUYỀN</span></a></li>
         <li class='has-sub'><a href='#'><span>XÓA TÀI KHOẢN</span></a>
             <ul>
                 <li><a href='admin-delete-account-admin'><span>Tài khoản admin</span></a></li>
@@ -33,7 +33,7 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!'); ?>
                 <li class='last'><a href='admin-delete-account-member'><span>Tài khoản công dân</span></a></li>
             </ul>
         </li>
-        <li><a href=''><span>ĐĂNG BÀI</span></a></li>
+        <li><a href='loggedin_site-admin_site'><span>HƯỚNG DẪN</span></a></li>
         <li class='last'><a href='logout'><span>ĐĂNG XUẤT</span></a></li>
     </ul>		
 </div>

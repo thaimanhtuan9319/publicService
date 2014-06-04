@@ -38,7 +38,7 @@ $result = get_list_answered();
     </head>
     <body>
         <div id="content">
-            <div class="heading">Các câu hỏi thường gặp</div>
+            <div class="heading">Câu hỏi đã trả lời</div>
             <div style="height: 30px"></div>
             <table class="table" style="border-collapse: collapse; background-color: whitesmoke;" >
                 <tbody>

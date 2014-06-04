@@ -8,6 +8,9 @@ if(!defined('SYSPATH')) die('Request not found');
 $id_canbo = $_SESSION['id_canbo'];
 $id_coquan = $_SESSION['id_coquan'];
 
+//echo $id_canbo;
+//echo $id_coquan;
+
 if(isset($_POST['submitted'])){
     $cauhoi = $cautraloi = '';
     
@@ -23,7 +26,7 @@ if(isset($_POST['submitted'])){
           or die("Can't select database!");
     mysql_query("SET NAMES utf8");
     
-    $sql = "insert into faq(cau_hoi, cau_tra_loi, id_can_bo, Id_don_vi_quan_ly) "
+    $sql = "insert into faq(cau_hoi, cau_tra_loi, can_bo_id_can_bo, Id_don_vi_quan_ly) "
                 . "values ('$cauhoi', '$cautraloi', '$id_canbo', '$id_coquan')";
         
     if (!mysql_query($sql)) { 

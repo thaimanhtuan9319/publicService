@@ -32,9 +32,8 @@ if(isset($_POST['submitted'])){
     //can bo
     $sql2 = "select * from can_bo where Username = '".$name."' and Password = '".$pass."';";
     $result2 = mysql_query($sql2);
-    $rowdata = mysql_fetch_array($result2);
-    $id_coquan = $rowdata['Id_don_vi_quan_ly'];
     $numrows2 = mysql_num_rows($result2);
+    $data = mysql_fetch_array($result2);
     
     if($numrows1 > 0){
         session_start();
@@ -46,9 +45,14 @@ if(isset($_POST['submitted'])){
     else{
         if ($numrows2 > 0) {
             session_start();
-	        $_SESSION['username'] = $name;
+            $id_canbo = $data['id_can_bo'];
+            $id_coquan = $data['Id_don_vi_quan_ly'];
+	    $_SESSION['username'] = $name;
+            $_SESSION['id_canbo'] = $id_canbo;
             $_SESSION['id_coquan'] = $id_coquan;
             header("Location: http://".$_SERVER['HTTP_HOST']."/publicService/appManager/loggedin_site-staff_site");
+//            echo $id_canbo;
+//            echo $id_coquan;
             exit();
         }
         else{

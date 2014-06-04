@@ -13,7 +13,7 @@ if(!isset($_SESSION['username'])) load_menubar('index');
 else load_menubar('member');
 load_leftbar('login');
 load_content('login');
-//load_rightbar();
-//load_footer();
+load_rightbar('blank');
+load_footer();
 
 ?>

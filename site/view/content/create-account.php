@@ -7,7 +7,7 @@ require ('site/model/create-account.php');
     <div style="height: 30px"></div>
     <p style="color: #dd4b39">* Bắt buộc</p>
     <form method="POST" action="" accept-charset='UTF-8'>
-        <fieldset style="text-align: center;">
+        <fieldset class="fieldset">
             <input type='hidden' name='submitted' id='submitted' value='1'/>
             
             <p class="create-account-label">
@@ -52,7 +52,7 @@ require ('site/model/create-account.php');
             <span class="input-error" style="color: #dd4b39">* <?php echo $emailMess;?></span>
             <div style="height: 30px"></div>
             
-            <input id = "btSignup" type="submit" name="submit" value="Đăng ký"/>
+            <input class="style-button" type="submit" name="submit" value="Đăng ký"/>
         </fieldset>
     </form>
 </div>

@@ -10,17 +10,17 @@ db_connect();
 $result = get_list_user_admin();
 ?>
     
-<div id="content" style="width: 750px">
-    <div class="box">
-        <div class="heading">DANH SÁCH TÀI KHOẢN ADMIN</div>
+<div id="content" style="width: 800px">
+    <div style="margin-left: 150px">
+        <h2 style="font-weight: bold;font-size: 19pt;margin-top: 15px;overflow: hidden;">Danh sách tài khoản admin</h2>
         <div style="height: 30px"></div>
-        <table class="table">
-            <tr class="table-head">
-                <td style="width: 50px">Id</td>
-                <td style="width: 120px">Họ</td>
-                <td style="width: 120px">Tên</td>
-                <td style="width: 120px">Tên tài khoản</td>
-                <td style="width: 120px">Email</td>    
+        <table id="tfhover" class="tftable" border="1">
+            <tr>
+                <th style="width: 50px">Id</th>
+                <th style="width: 120px">Họ</th>
+                <th style="width: 120px">Tên</th>
+                <th style="width: 120px">Tên tài khoản</th>
+                <th style="width: 120px">Email</th>    
             </tr>
             <tbody>
                     <?php 

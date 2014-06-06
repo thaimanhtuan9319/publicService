@@ -10,18 +10,18 @@ db_connect();
 $result = get_list_user_staff();
 ?>
     
-<div id="content" style="width: 750px">
-    <div class="box">
-        <div class="heading">DANH SÁCH TÀI KHOẢN CÁN BỘ</div>
+<div id="content" style="width: 800px">
+    <div style="margin-left: 150px">
+        <h2 style="font-weight: bold;font-size: 19pt;margin-top: 15px;overflow: hidden;">Danh sách tài khoản cán bộ</h2>
         <div style="height: 30px"></div>
-        <table class="table">
-            <tr class="table-head">
-                <td style="width: 50px">Id</td>
-                <td style="width: 100px">Tên cán bộ</td>
-                <td style="width: 100px">Tên tài khoản</td>
-                <td style="width: 100px">Số điện thoại</td>
-                <td style="width: 100px">Email</td>  
-                <td style="width: 200px;">Đơn vị quản lý</td>  
+        <table id="tfhover" class="tftable" border="1">
+            <tr>
+                <th style="width: 50px">Id</th>
+                <th style="width: 100px">Tên cán bộ</th>
+                <th style="width: 100px">Tên tài khoản</th>
+                <th style="width: 100px">Số điện thoại</th>
+                <th style="width: 100px">Email</th>
+                <th style="width: 200px;">Đơn vị quản lý</th>
             </tr>
             <tbody>
                     <?php 

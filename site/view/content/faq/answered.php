@@ -46,11 +46,11 @@ $result = get_list_answered();
                         foreach($result as $item){
                     ?>
                     <tr>
-                <fieldset class="main">
+                <fieldset class="fieldset">
                     <legend class="main" style="font-weight: bold;"><?php echo $item['tieu_de']; ?></legend>
                     <?php echo $item['ngay_gui']; ?><br />
                     Câu hỏi: <?php echo $item['cau_hoi']; ?> <br />     
-                    <button class="flip"> Xem câu trả lời </button> 
+                    <button class="flip" class="style-button"> Xem câu trả lời </button> 
                     <div class="panel"><?php echo $item['cau_tra_loi']; ?></div>             
                 </fieldset>
                 

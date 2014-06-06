@@ -46,7 +46,7 @@ $result = get_list_faq();
                         foreach($result as $item){
                     ?>
                     <tr>
-                <fieldset class="main">
+                <fieldset class="fieldset">
                     <legend class="main" style="font-weight: bold;">Câu hỏi: <?php echo $item['cau_hoi']; ?></legend>
                     <div><?php echo $item['cau_tra_loi']; ?></div>             
                 </fieldset>

@@ -15,7 +15,7 @@
                             <input type="text" name="search-data" value="" style="margin-left: 10px; margin-top: 10px; height: 20px;" />
                         </td>
                         <td>
-                            <input type="submit" name="search" value="Tìm kiếm" style="margin-top: 10px; font-size: 14px;"/>
+                            <input class="style-button" type="submit" name="search" value="Tìm kiếm" style= "height: 30px;margin-top: 10px"/>
                         </td>
                     </tr>
                     

@@ -10,11 +10,12 @@ db_connect();
 $result1 = get_list_dichvu();
 $result2 = get_list_donvi();
 ?>
-<div id="content" style="margin-left: 100px">
+<div id="content" style="width: 750px">
+    <div style="margin-left: 150px">
     <h3 style="text-align: center">Thay đổi thông tin dịch vụ công</h3>
     <div style="height: 20px"></div>
     <form method="POST" action="">
-        <fieldset>
+        <fieldset class="fieldset">
             <span class="title">Lựa chọn dịch vụ cần chỉnh sửa</span>
             <div style="height: 20px"></div>
             <select name="Id_dichvu">
@@ -65,10 +66,11 @@ $result2 = get_list_donvi();
             <p><?php if(isset($mess)) echo $mess?></p>
             <div style="height: 20px"></div>
             <div style="text-align: center">
-                <input style="width: 120px;height: 40px"
-                       type="submit" value="Cập nhật dịch vụ" name="submited">
+                <input class="style-button" style="width: 120px;height: 40px"
+                       type="submit" value="Cập nhật" name="submited">
             </div>
                 
         </fieldset>
     </form>
+    </div>
 </div>

@@ -14,16 +14,16 @@ $result = get_list_donvi();
         <link href="../../../public/css/lookup-info.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div id="content">
+        <div id="content" style="margin-left: 150px">
             <h2 id="title">Tra cứu thông tin dịch vụ</h2>
-            <fieldset class="main">
+            <fieldset class="fieldset">
                 <legend class="main">Hướng dẫn tra cứu</legend>
                 -Bước 1: Nhập tên dịch vụ cần tra cứu (Ví dụ: cấp visa)<br />
                 -Bước 2: Chọn đơn vị tiếp nhận hồ sơ<br />
                 -Bước 3: Nhấn nút 'Tra cứu' để tìm kiếm thông tin về dịch vụ<br />
             </fieldset>
             <form method="post" action="lookup-info-result">
-                <fieldset class="main">
+                <fieldset class="fieldset">
                     <legend class="main">Tra cứu</legend>
                     <table>
                         <tr>
@@ -44,7 +44,7 @@ $result = get_list_donvi();
                         </tr>
                         <tr>
                             <td></td>
-                            <td><input type="submit" name="submited" value="Tra cứu" style="font: Segoe;"/></td>
+                            <td style="padding-top: 10px"><input type="submit" name="submited" value="Tra cứu" class="style-button""/></td>
                         </tr>
                     </table>
                     

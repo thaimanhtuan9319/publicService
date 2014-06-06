@@ -24,7 +24,7 @@ $_SESSION['views']=1;
             </div>
             <div style="height: 40px"></div>
             <div>
-                <input id = "btLogin" type="submit" name='btLogin' value="Đăng nhập">
+                <input type="submit" name='btLogin' value="Đăng nhập" class="style-button">
             </div>
             <div style="height: 40px"></div>
             <div id="login-error">

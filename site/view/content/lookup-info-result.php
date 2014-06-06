@@ -1,13 +1,13 @@
 <?php
-
+    
 /* 
  * Author: Tuan ThaiManh
  */
-
+     
 require ('site/model/lookup-info-result.php');
 db_connect();
 $keyname = $keydonvi = '';
-
+    
 if(isset($_POST['submited'])){
     $keyname = $_POST['tendichvu'];
     $keydonvi = $_POST['phongban'];
@@ -15,11 +15,13 @@ if(isset($_POST['submited'])){
 }
 $data = get_list_result($keyname, $keydonvi);
 ?>
-<div style="height: 60px"></div>
-<div class="heading" style="text-align: center">KẾT QUẢ TRA CỨU</div>
-<div style="height: 30px"></div>
-<h3 style="margin-left: 100px">Tên dịch vụ tra cứu:</h3> <span style="margin-left: 100px"><?php echo $keyname;?></span>
-<h3 style="margin-left: 100px">Tên đơn vị tra cứu: </h3><span style="margin-left: 100px"><?php
+<div id="content" style="width: 800px">
+    <div style="margin-left: 150px">
+        <div style="height: 60px"></div>
+        <div class="heading" style="text-align: center">KẾT QUẢ TRA CỨU</div>
+        <div style="height: 30px"></div>
+        <h3>Tên dịch vụ tra cứu:</h3> <span style="margin-left: 100px"><?php echo $keyname;?></span>
+        <h3>Tên đơn vị tra cứu: </h3><span style="margin-left: 100px"><?php
                     switch ($keydonvi){
                         case 1:
                             echo "Văn phòng HĐND-UBND";
@@ -62,30 +64,32 @@ $data = get_list_result($keyname, $keydonvi);
                             break;
                     }
                     ?></span>
-<div style="height: 30px"></div>
-<table class="table" style="margin-left: 100px" >
-    <thead>
-        <tr class="table-head">
-            <td>Tên dịch vụ</td>
-            <td>Mô tả dịch vụ</td>
-            <td>Mức độ cung cấp</td>
-            
-        </tr>
-    </thead>
-    <tbody>
+        <div style="height: 30px"></div>
+        <table id="tfhover" class="tftable" border="1">
+            <thead>
+                <tr>
+                    <th>Tên dịch vụ</th>
+                    <th>Mô tả dịch vụ</th>
+                    <th>Mức độ cung cấp</th>
+                        
+                </tr>
+            </thead>
+            <tbody>
                     <?php 
                         foreach($data as $item){
                     ?>
-        <tr>
-            <td><?php echo $item['ten_dich_vu']; ?></td>
-            <td><?php echo $item['mo_ta']; ?></td>
-            <td><?php echo $item['muc_do_cung_cap']; ?></td>
-           
-        </tr>
+                <tr>
+                    <td><?php echo $item['ten_dich_vu']; ?></td>
+                    <td><?php echo $item['mo_ta']; ?></td>
+                    <td><?php echo $item['muc_do_cung_cap']; ?></td>
+                        
+                </tr>
             <?php }?>      
-    </tbody>
-</table>
-<div style="height: 50px"></div>
-<div style="text-align: center">
-    <a href="lookup-info">Quay lại trang tra cứu thông tin dịch vụ</a>
+            </tbody>
+        </table>
+        <div style="height: 50px"></div>
+        <div style="text-align: center">
+            <a href="lookup-info">Quay lại trang tra cứu thông tin dịch vụ</a>
+        </div>
+    </div>
 </div>

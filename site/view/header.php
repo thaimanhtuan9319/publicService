@@ -9,6 +9,9 @@ if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!');
         <link rel="Stylesheet" href="../public/css/style.css" type="text/css">
         <link rel="Stylesheet" href="../public/css/leftmenu_admin.css" type="text/css">
         <link rel="Stylesheet" href="../public/css/table-style.css" type="text/css">
+        <link rel="Stylesheet" href="../public/css/button-style.css" type="text/css">
+        <link rel="Stylesheet" href="../public/css/select-style.css" type="text/css">
+        <script src="../public/css/table-script.js"></script>
     </head>        
     <body>
         

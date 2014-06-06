@@ -1,14 +1,19 @@
 <?php if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!'); ?>
-<div id="leftbar">
-        <ul class="single-vertical-menu">
-            <li><a class="active" href ="">Trang tin điện tử</a></li> 
-            <li><a href ="">Diễn đàn</a></li>
-            <li><a href ="">Dịch vụ công</a></li>
-            <li><a href ="">Phổ biến kiến thức</a></li>
-            <li><a href ="">Đào tạo từ xa</a></li>
-            <li><a href ="">Hoạt động sáng tạo</a></li>
-            <li><a href ="">Tư vấn phản biện</a></li>
-            <li><a href ="">Thư điện tử</a></li>		
-        </ul>
+<div id="leftbar-index">
+    <a href="http://chinhphu.vn">
+        <img class="linkedimg" src="../public/images/chinhphu_vn_nv.jpg"/>
+    </a>
+    <a href="http://thutuchanhchinh.vn">
+        <img class="linkedimg" src="../public/images/vpcp.PNG" />
+    </a>
+    <a href="http://thudo.gov.vn">
+        <img class="linkedimg" src="../public/images/ttdhhn.jpg" />
+    </a>
+    <a href="http://vno.chinhphu.vn/vno/">
+        <img class="linkedimg" src="../public/images/chuyende.PNG" />
+    </a>
+    <a href="http://hanoi.gov.vn/">
+        <img class="linkedimg" src="../public/images/hanoi_portal.jpg" />
+    </a>
 </div>
 

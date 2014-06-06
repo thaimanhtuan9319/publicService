@@ -1,32 +1,67 @@
 <?php if(!defined('SYSPATH')) die ('REQUEST NOT FOUND!'); ?>
 
-<div id="content">
-    <h2>Khu chung cư hiện đại của Thủ đô không bằng… vùng sâu!” (15:18:27 Ngày 01/12/2010)</h2>
-    <p>
-        Ông Phan Huy Khang (cử tri phường Trung Hoà, Cầu Giấy) cho rằng, vùng sâu, vùng xa còn có nhà văn hoá, trường học… chứ khu chung cư hiện đại nhất nhì thủ đô chỉ có một trường học với mức học phí người thu nhập bình thường khó theo nổi.
-        “Khu chung cư hiện đại của Thủ đô không bằng… vùng sâu!”
-        (Dân trí) - Ông Phan Huy Khang (cử tri phường Trung Hoà, Cầu Giấy) cho rằng, vùng sâu, vùng xa còn có nhà văn hoá, trường học… chứ khu chung cư hiện đại nhất nhì thủ đô chỉ có một trường học với mức học phí người thu nhập bình thường khó theo nổi.
-        Rất nhiều vấn đề dân sinh bức xúc đã được người dân gửi tới lãnh đạo thành phố Hà Nội, lãnh đạo các quận trong buổi làm việc ngày 30/11.
-        
-        Ông Nguyễn Đình Thi (Dịch Vọng, Cầu Giấy) cho rằng, dù quy định ban quản trị quản lý nhà chung cư đã được ban hành từ khá lâu, nhưng đến nay thành phố vẫn… chưa thực hiện. “Các cơ quan thường nói phải nghiên cứu, nhưng đã có quy định rồi, phải thực hiện, không nên nghiên cứu nữa”, ông Thi bày tỏ.
-        
-        Cũng theo ông Thi, sau khi xây dựng các nhà chung cư, chủ đầu tư thường chuyển cho Xí nghiệp quản lý nhà đô thị và đơn vị này chỉ thu phí thu phí mà “quên” quản lý, sửa chữa. Vừa qua tại nơi ông sinh sống, người dân đã chủ động thành lập ban quản trị cùng với xí nghiệp quản lý toà nhà.
-        
-        Vậy nhưng, theo ông Thi, cho đến nay phía cơ quan quản lý nhà nước vẫn vẫn còn tư tưởng bảo vệ chủ đầu tư. “Họ bảo nếu có ban quản trị sẽ đấu tranh với chủ đầu tư, nhưng nếu có đấu tranh thì cũng phải theo pháp luật chứ”, ông Thi nói.
-        
-        Cũng liên quan đến các khu chung cư, ông Phan Huy Khang (phường Trung Hoà, Cầu Giấy) nhìn nhận, khu chung cư Trung Hoà - Nhân Chính, nơi ông đang sống được xem là chung cư hiện đại, thậm chí nhất nhì tại Hà Nội, nhưng lại thua… vùng sâu, vùng xa!
-    </p>
-    <?php
-if(isset($_POST['username']) && isset($_POST['password']))
-{
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    echo $username;
-    echo "<br>";
-    echo $password;
-}
-?>
+<div id="content" style="width: 605px; display: block">
+    <div style="width: 350px; float: left;">
+        <img  style="width: 350px" src="../public/images/index1.jpg"/>
+        <span style="width: 350px; display: block; font-weight: bold;"><a style="text-decoration: none" href="tintuc_Tong_ket_cong_tac_giao_duc_quoc_phong">Tổng kết công tác giáo dục quốc phòng – an ninh và phòng không nhân dân năm 2013, triển khai nhiệm vụ trọng tâm năm 2014</a></span>
+    </div>
+    <div style="float: right;">
+        <table style="width: 250px">
+            <tr> 
+                <th style="border-bottom: 2px solid #00aaaa; height: 50px; color: #f0f0f0; background: #00aaaa">TIN TỨC NỔI BẬT</th>
+            </tr>
+            <tr>
+                <td style="border-bottom: 2px solid #00aaaa; line-height: 150%"><a style="text-decoration: none" href="tintuc_Huong_ung">Hưởng ứng ngày Môi trường thế giới năm 2014</a></td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 2px solid #00aaaa; line-height: 150%"><a style="text-decoration: none" href="tintuc_Khai_truong">Khai trương dự án đào tạo công nghệ thông tin cho người khuyết tật năm 2014</a></td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 2px solid #00aaaa; line-height: 150%"><a style="text-decoration: none" href="#">Hành động vì một xã hội không bạo lực, không xâm hại trẻ em</a></td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 2px solid #00aaaa; line-height: 150%"><a style="text-decoration: none" href="#">Lễ tưởng niệm 70 năm ngày hy sinh của đồng chí Hoàng Văn Thụ</a></td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 2px solid #00aaaa; line-height: 150%"><a style="text-decoration: none" href="#">Hội nghị sơ kết 03 năm thực hiện Chỉ thị 03-CT/TW về học tập và làm ...</a></td>
+            </tr>
+        </table>
+    </div>
+    <div style="display: block">
+        <img src="../public/images/tracuu.png" style="width: 605px; margin-top: 10px;"/>
+    </div>
+    <div style="float: left; width: 300px">
+        <table style="width: 300px">
+            <tr>
+                <th style="border-bottom: 2px solid #00aaaa; height: 50px; color: #f0f0f0; background: #00aaaa">VĂN HÓA - XÃ HỘI</th>
+            </tr>
+            <tr>
+                <td style="border-bottom: 2px solid #00aaaa; line-height: 150%"><a style="text-decoration: none" href="tintuc_Khai_truong">Khai trương dự án đào tạo công nghệ thông tin cho người khuyết tật năm 2014</td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 2px solid #00aaaa; line-height: 150%"><a style="text-decoration: none" href="#">Hành động vì một xã hội không bạo lực, không xâm hại trẻ em</a></td>
+            </tr>
+             <tr>
+                 <td style="border-bottom: 2px solid #00aaaa; line-height: 150%"><a style="text-decoration: none" href="#">Lễ tưởng niệm 70 năm ngày hy sinh của đồng chí Hoàng Văn Thụ</a></td>
+            </tr>
+        </table>
+    </div>
+    <div style="float: right; width: 300px">
+        <table style="width: 300px">
+            <tr>
+                <th style="border-bottom: 2px solid #00aaaa; height: 50px; color: #f0f0f0; background: #00aaaa">PHÁP LUẬT - AN NINH - QUỐC PHÒNG</th>
+            </tr>
+            <tr>
+                <td style="border-bottom: 2px solid #00aaaa; line-height: 150%"><a style="text-decoration: none" href="tintuc_Tong_ket_cong_tac_giao_duc_quoc_phong">Tổng kết công tác giáo dục quốc phòng – an ninh và phòng không nhân dân năm 2013, triển khai nhiệm vụ trọng tâm năm 2014</a></td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 2px solid #00aaaa; line-height: 150%"><a style="text-decoration: none" href="#">Triển khai kế hoạch vận động ủng hộ quân và dân huyện đảo Trường Sa</a></td>
+            </tr>
+             <tr>
+                 <td style="border-bottom: 2px solid #00aaaa; line-height: 150%"><a style="text-decoration: none" href="#">Triển khai công tác phòng chống lụt bão năm 2014</a></td>
+            </tr>
+        </table>
+    </div>
 </div>
 
 

@@ -11,8 +11,7 @@ load_header();
 if(!isset($_SESSION['username'])) load_menubar('index');
 else load_menubar('member');
 load_leftbar('index');
-load_content('index');
+load_content('tintuc/Huong_ung');
 load_rightbar('index');
 load_footer();
 ?>
-

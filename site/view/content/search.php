@@ -17,29 +17,31 @@ $data2 = get_list_data_donvi($key);
 $data3 = get_list_data_tailieu($key);
 $data4 = get_list_data_faq($key);
 ?>
-<div style="height: 60px"></div>
-<div class="heading" style="text-align: center">KẾT QUẢ TÌM KIẾM</div>
-<div style="height: 30px"></div>
-<h3 style="margin-left: 100px">Từ khóa tìm kiếm: <?php echo $key;?></h3>
-<h3 style="margin-left: 100px">Dịch vụ liên quan</h3>
-<table class="table" style="margin-left: 100px" >
-    <thead>
-        <tr class="table-head">
-            <td>Tên dịch vụ</td>
-            <td>Mô tả dịch vụ</td>
-            <td>Mức độ cung cấp</td>
-            <td>Cơ quan quản lý</td>
-        </tr>
-    </thead>
-    <tbody>
+<div id="content" style="width: 800px">
+    <div style="margin-left: 150px">
+        <div style="height: 60px"></div>
+        <div class="heading" style="text-align: center">KẾT QUẢ TÌM KIẾM</div>
+        <div style="height: 30px"></div>
+        <h3 style="margin-left: 100px">Từ khóa tìm kiếm: <?php echo $key;?></h3>
+        <h3 style="margin-left: 100px">Dịch vụ liên quan</h3>
+        <table  id="tfhover" class="tftable" border="1">
+            <thead>
+                <tr>
+                    <th>Tên dịch vụ</th>
+                    <th>Mô tả dịch vụ</th>
+                    <th>Mức độ cung cấp</th>
+                    <th>Cơ quan quản lý</th>
+                </tr>
+            </thead>
+            <tbody>
                     <?php 
                         foreach($data as $item){
                     ?>
-        <tr>
-            <td><?php echo $item['ten_dich_vu']; ?></td>
-            <td><?php echo $item['mo_ta']; ?></td>
-            <td><?php echo $item['muc_do_cung_cap']; ?></td>
-            <td><?php
+                <tr>
+                    <td><?php echo $item['ten_dich_vu']; ?></td>
+                    <td><?php echo $item['mo_ta']; ?></td>
+                    <td><?php echo $item['muc_do_cung_cap']; ?></td>
+                    <td><?php
                     switch ($item['Id_don_vi_quan_ly']){
                         case 1:
                             echo "Văn phòng HĐND-UBND";
@@ -82,67 +84,69 @@ $data4 = get_list_data_faq($key);
                             break;
                     }
                         ?></td>
-        </tr>
+                </tr>
             <?php }?>      
-    </tbody>
-</table>
-<div style="height: 50px"></div>
-<h3 style="margin-left: 100px">Đơn vị liên quan</h3>
-<table class="table" style="margin-left: 100px" >
-    <thead>
-        <tr class="table-head">
-            <td>Tên đơn vị</td>
-            <td>Địa chỉ</td>
-        </tr>
-    </thead>
-    <tbody>
+            </tbody>
+        </table>
+        <div style="height: 50px"></div>
+        <h3 style="margin-left: 100px">Đơn vị liên quan</h3>
+        <table id="tfhover" class="tftable" border="1">
+            <thead>
+                <tr>
+                    <th>Tên đơn vị</th>
+                    <th>Địa chỉ</th>
+                </tr>
+            </thead>
+            <tbody>
                     <?php 
                         foreach($data2 as $item){
                     ?>
-        <tr>
-            <td><?php echo $item['ten_don_vi_quan_ly']; ?></td>
-            <td><?php echo $item['diachi_don_vi_quan']; ?></td>
-        </tr>
+                <tr>
+                    <td><?php echo $item['ten_don_vi_quan_ly']; ?></td>
+                    <td><?php echo $item['diachi_don_vi_quan']; ?></td>
+                </tr>
             <?php }?>      
-    </tbody>
-</table>
-<div style="height: 50px"></div>
-<h3 style="margin-left: 100px">Tài liệu hồ sơ liên quan</h3>
-<table class="table" style="margin-left: 100px" >
-    <thead>
-        <tr class="table-head">
-            <td>Tên tài liệu hồ sơ</td>
-            <td>Mẫu hồ sơ</td>
-        </tr>
-    </thead>
-    <tbody>
+            </tbody>
+        </table>
+        <div style="height: 50px"></div>
+        <h3 style="margin-left: 100px">Tài liệu hồ sơ liên quan</h3>
+        <table  id="tfhover" class="tftable" border="1" >
+            <thead>
+                <tr>
+                    <th>Tên tài liệu hồ sơ</th>
+                    <th>Mẫu hồ sơ</th>
+                </tr>
+            </thead>
+            <tbody>
                     <?php 
                         foreach($data3 as $item){
                     ?>
-        <tr>
-            <td><?php echo $item['ten_tai_lieu']; ?></td>
-            <td><a href="download-form&id_file=<?=$item['Id_tai_lieu']?>">download</a></td>
-        </tr>
+                <tr>
+                    <td><?php echo $item['ten_tai_lieu']; ?></td>
+                    <td><a href="download-form&id_file=<?=$item['Id_tai_lieu']?>">download</a></td>
+                </tr>
             <?php }?>      
-    </tbody>
-</table>
-<div style="height: 50px"></div>
-<h3 style="margin-left: 100px">Câu hỏi thường gặp liên quan</h3>
-<table class="table" style="margin-left: 100px" >
-    <thead>
-        <tr class="table-head">
-            <td>Câu hỏi</td>
-            <td>Câu trả lời</td>
-        </tr>
-    </thead>
-    <tbody>
+            </tbody>
+        </table>
+        <div style="height: 50px"></div>
+        <h3 style="margin-left: 100px">Câu hỏi thường gặp liên quan</h3>
+        <table id="tfhover" class="tftable" border="1">
+            <thead>
+                <tr>
+                    <th>Câu hỏi</th>
+                    <th>Câu trả lời</th>
+                </tr>
+            </thead>
+            <tbody>
                     <?php 
                         foreach($data4 as $item){
                     ?>
-        <tr>
-            <td><?php echo $item['cau_hoi']; ?></td>
-            <td><?php echo $item['cau_tra_loi']; ?></td>
-        </tr>
+                <tr>
+                    <td><?php echo $item['cau_hoi']; ?></td>
+                    <td><?php echo $item['cau_tra_loi']; ?></td>
+                </tr>
             <?php }?>      
-    </tbody>
-</table>
+            </tbody>
+        </table>
+    </div>
+</div>
